@@ -4,9 +4,9 @@ import Button from 'components/Navbar/Button/Button';
 const Navbar = () =>{
   return(
     <Wrapper>
-      <Button img="home" color="grey"/>
-      <Button img="add" color="yellow" />
-      <Button img="user" color="pistachio"/>
+      <Button img="home" color="grey" url="/"/>
+      <Button img="add" color="yellow" url="/add"/>
+      <Button img="user" color="pistachio" url="/account"/>
     </Wrapper>
   )
 };

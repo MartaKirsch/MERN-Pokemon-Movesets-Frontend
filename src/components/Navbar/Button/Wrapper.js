@@ -1,20 +1,13 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.button`
+const Wrapper = styled.div`
 
   width:2.5vw;
   height:2.5vw;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:15px;
   &:nth-of-type(2)
   {
     margin: 0 2vw;
   }
-  background-color: var(--${props=>props.color});
-  position:relative;
-  z-index:1;
 
   @keyframes showbefore {
     from {
@@ -26,7 +19,20 @@ const Wrapper = styled.button`
     }
   }
 
-  &::after
+  a
+  {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:15px;
+    width:100%;
+    height:100%;
+    background-color: var(--${props=>props.color});
+    position:relative;
+    z-index:1;
+  }
+
+  a::after
   {
     content:'';
     position:absolute;
@@ -41,7 +47,7 @@ const Wrapper = styled.button`
     border-radius:15px;
   }
 
-  &::before
+  a::before
   {
     content:'';
     position:absolute;
@@ -58,11 +64,11 @@ const Wrapper = styled.button`
     animation-fill-mode: forwards;
   }
 
-  &:hover::after, &:focus::after
+  a:hover::after, a:focus::after
   {
     transform:scale(1);
   }
-  &:hover::before, &:focus::before
+  a:hover::before, a:focus::before
   {
     /* animation-fill-mode: forwards; */
     /* animation:showbefore 0.1s linear 0.25s; */
@@ -76,7 +82,7 @@ const Wrapper = styled.button`
     transition: transform 0.25s ease-out;
   }
 
-  &:hover img, &:focus img
+  a:hover img, a:focus img
   {
     transform: scale(0.8);
   }
