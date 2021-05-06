@@ -80,6 +80,8 @@ const Wrapper = styled.div`
   img
   {
     transition: transform 0.25s ease-out;
+    width:1.56vw;
+    height:1.56vw;
   }
 
   a:hover img, a:focus img

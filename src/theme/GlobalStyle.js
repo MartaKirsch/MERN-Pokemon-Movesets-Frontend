@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     --pistachio:#ADEEC2;
     --yellow:#F5DA88;
     --grey:#F5F5F5;
+    --blue:#66CCFF;
 
     --pistachio_D:#9CDDB1;
     --yellow_D:#E4C977;

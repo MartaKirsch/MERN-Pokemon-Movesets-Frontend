@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalStyle from 'theme/GlobalStyle';
 import Wrapper from 'components/Wrapper';
 import Navbar from 'views/Navbar';
+import Home from 'views/Home';
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
         <Wrapper>
           <Navbar/>
           <Switch>
-            <Route exact path="/"><h1>home</h1></Route>
+            <Route exact path="/" component={Home}/>
             <Route path="/add"><h1>add</h1></Route>
             <Route path="/account"><h1>account</h1></Route>
           </Switch>
