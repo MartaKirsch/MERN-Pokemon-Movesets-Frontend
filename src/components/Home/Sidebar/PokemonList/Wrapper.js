@@ -1,0 +1,32 @@
+import styled from 'styled-components';
+
+const Wrapper = styled.ul`
+
+  width:100%;
+  height:80%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  overflow-y:auto;
+
+  scrollbar-color: #7D8D9C #adeec2;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+   width: 0.5vw;
+  }
+
+  &::-webkit-scrollbar-track {
+   background: #adeec2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+   background: #7D8D9C;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+   background: #6c7c8b;
+  }
+`;
+
+export default Wrapper;

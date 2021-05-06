@@ -40,6 +40,7 @@ const GlobalStyle = createGlobalStyle`
   a{
     color:inherit;
     text-decoration:none;
+    outline:none;
   }
 
   button{
@@ -50,6 +51,7 @@ const GlobalStyle = createGlobalStyle`
     font-family:inherit;
     padding:0;
     background-color:inherit;
+    outline:none;
   }
 
   input{
@@ -75,6 +77,7 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
     padding: 0;
     margin: 0;
+    outline:none;
   }
 `;
 
