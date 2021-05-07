@@ -44,10 +44,10 @@ const Wrapper = styled.div`
     height:125%;
     background-color:var(--blue);
     transform:scale(0);
-    transition:transform 0.2s ease-out;
+    transition:transform 0.4s ease-out;
   }
 
-  input[type="search"]:focus + .line::after
+  input[type="search"]:focus + .line::after,input[type="search"]:hover + .line::after
   {
     transform:scale(1);
   }

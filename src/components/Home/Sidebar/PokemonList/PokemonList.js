@@ -1,7 +1,10 @@
+// import { useRef, useEffect } from 'react';
 import Wrapper from 'components/Home/Sidebar/PokemonList/Wrapper';
 import PokemonListItem from 'components/Home/Sidebar/PokemonList/PokemonListItem/PokemonListItem';
+import LoadMoreButton from 'components/Home/Sidebar/PokemonList/LoadMoreButton';
 
 const PokemonList = () => {
+
   return(
     <Wrapper>
       <PokemonListItem
@@ -31,6 +34,7 @@ const PokemonList = () => {
       number="1"
       types={['grass','poison']}
       />
+      <LoadMoreButton>Load More</LoadMoreButton>
     </Wrapper>
   )
 };

@@ -9,16 +9,16 @@ const Wrapper = styled.ul`
   align-items:center;
   overflow-y:auto;
 
-  scrollbar-color: #7D8D9C #adeec2;
+  scrollbar-color: #7D8D9C transparent;
   scrollbar-width: thin;
 
   &::-webkit-scrollbar {
    width: 0.5vw;
   }
 
-  &::-webkit-scrollbar-track {
+  /* &::-webkit-scrollbar-track {
    background: #adeec2;
-  }
+  } */
 
   &::-webkit-scrollbar-thumb {
    background: #7D8D9C;
