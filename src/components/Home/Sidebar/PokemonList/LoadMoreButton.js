@@ -14,6 +14,16 @@ const LoadMoreButton = styled.button`
   z-index:1;
   position:relative;
 
+  &:disabled,
+  &[disabled]{
+    background-color: var(--grey);
+  }
+
+  &:disabled::after,
+  &[disabled]::after{
+    background-color: var(--grey_D);
+  }
+
   &::after
   {
     content:'';
@@ -23,7 +33,7 @@ const LoadMoreButton = styled.button`
     top:0;
     left:0;
     transform:scale(0);
-    transition:transform .2s ease-out;
+    transition:transform .15s ease-out;
     z-index:-1;
     background-color:var(--pistachio_D);
     border-radius:15px;
@@ -63,9 +73,9 @@ const LoadMoreButton = styled.button`
 
   &:focus::before, &:hover::before
   {
-    animation: showbefore 0.1s 0.25s forwards;
-    -moz-animation: showbefore 0.1s 0.25s forwards;
-    -webkit-animation: showbefore 0.1s 0.25s forwards;
+    animation: showbefore 0.1s 0.15s forwards;
+    -moz-animation: showbefore 0.1s 0.15s forwards;
+    -webkit-animation: showbefore 0.1s 0.15s forwards;
   }
 `;
 
