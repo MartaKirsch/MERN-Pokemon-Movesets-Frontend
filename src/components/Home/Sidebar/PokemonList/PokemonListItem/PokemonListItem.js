@@ -12,7 +12,7 @@ const PokemonListItem = ({url,name,number,types}) => {
           <div className="pokename">{`#${number} ${name}`}</div>
           <Type>
             {
-              types.map(type => <div className={type}>{type}</div>)
+              types.map(type => <div key={type} className={type}>{type}</div>)
             }
           </Type>
         </Info>

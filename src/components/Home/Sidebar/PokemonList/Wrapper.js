@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.ul`
+const Wrapper = styled.div`
 
   width:100%;
   height:80%;
@@ -8,6 +8,14 @@ const Wrapper = styled.ul`
   flex-direction:column;
   align-items:center;
   overflow-y:auto;
+
+  ul
+  {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
 
   scrollbar-color: #7D8D9C transparent;
   scrollbar-width: thin;
