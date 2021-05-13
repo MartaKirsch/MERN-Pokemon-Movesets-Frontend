@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     position:relative;
   }
 
-  input[type="search"]
+  input
   {
     width:100%;
     height:100%;
@@ -47,7 +47,7 @@ const Wrapper = styled.div`
     transition:transform 0.4s ease-out;
   }
 
-  input[type="search"]:focus + .line::after,input[type="search"]:hover + .line::after
+  input:focus + .line::after,input:hover + .line::after
   {
     transform:scale(1);
   }

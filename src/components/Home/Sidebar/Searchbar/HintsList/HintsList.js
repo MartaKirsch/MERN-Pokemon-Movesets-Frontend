@@ -1,16 +1,18 @@
 import { Link } from 'react-router-dom';
 import Wrapper from 'components/Home/Sidebar/Searchbar/HintsList/Wrapper';
+import Loading from 'components/Home/Sidebar/PokemonList/Loading/Loading';
+import Error from 'components/Home/Sidebar/PokemonList/Error/Error';
 
 
-const HintsList = ({display}) => {
+const HintsList = ({display, isError, isPending, hints}) => {
+
   return(
     <Wrapper display={display}>
-      <li><Link to="/">bulbasaur</Link></li>
-      <li><Link to="/">ivysaur</Link></li>
-      <li><Link to="/">venusaur</Link></li>
-      <li><Link to="/">charmander</Link></li>
-      <li><Link to="/">charmeleon</Link></li>
-      <li><Link to="/">charizard</Link></li>
+      {isPending && <Loading display="true"/>}
+      {isError && <Error display="true"/>}
+      {
+        hints.map(hint=><li key={hint}><Link to={`/${hint}`}>{hint}</Link></li>)
+      }
     </Wrapper>
   );
 };
