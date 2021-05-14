@@ -50,9 +50,10 @@ const Wrapper = styled.li`
   .line
   {
     position:absolute;
-    width:98%;
-    left:1%;
+    width:96%;
+    left:2%;
     height:6px;
+    border-radius:15px;
     background-color:var(--blue);
     transform:scaleX(0);
     transition: transform .4s ease .2s;

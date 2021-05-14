@@ -3,8 +3,8 @@ import axios from 'axios';
 import Wrapper from 'components/Home/Sidebar/PokemonList/Wrapper';
 import PokemonListItem from 'components/Home/Sidebar/PokemonList/PokemonListItem/PokemonListItem';
 import LoadMoreButton from 'components/Home/Sidebar/PokemonList/LoadMoreButton';
-import Loading from 'components/Home/Sidebar/PokemonList/Loading/Loading';
-import Error from 'components/Home/Sidebar/PokemonList/Error/Error';
+import Loading from 'components/Loading/Loading';
+import Error from 'components/Error/Error';
 
 
 const PokemonList = () => {

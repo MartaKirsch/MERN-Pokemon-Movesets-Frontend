@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import Wrapper from 'components/Home/Sidebar/PokemonList/Loading/Wrapper';
+import Wrapper from 'components/Loading/Wrapper';
 import {ReactComponent as Pokeballs} from 'imgs/loading.svg';
 
-const Loading = ({display}) => {
+const Loading = ({display,isInHints}) => {
 
   const pokeballsRef = useRef(null);
 
@@ -30,10 +30,14 @@ const Loading = ({display}) => {
 
 
   return(
-    <Wrapper display={display}>
+    <Wrapper display={display} isInHints={isInHints}>
       <Pokeballs  ref={pokeballsRef}/>
     </Wrapper>
   )
+};
+
+Loading.defaultProps = {
+  isInHints: 'false'
 };
 
 export default Loading;

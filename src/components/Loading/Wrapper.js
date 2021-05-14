@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
   svg
   {
-    height:3.5vw;
+    height: ${({isInHints})=> isInHints==="false" ? `3.5vw` : `2.5vw`};
     width:auto;
   }
 `;
