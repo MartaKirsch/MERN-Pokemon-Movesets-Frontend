@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import Wrapper from 'components/Home/Sidebar/Searchbar/Wrapper';
 import HintsList from 'components/Home/Sidebar/Searchbar/HintsList/HintsList';
@@ -12,7 +12,12 @@ const Searchbar = () => {
   const [isError, setIsError] = useState(false);
   const [searchPhrase, setSearchPhrase] = useState("");
 
+  const ref = useRef(null);
+
   useEffect(()=>{
+    //onclick event on window
+    window.addEventListener('click',checkClicked);
+
     let source = axios.CancelToken.source();
 
     setIsPending(true);
@@ -36,15 +41,22 @@ const Searchbar = () => {
 
     return () => {
       source.cancel("Cancelling in cleanup");
+      window.removeEventListener('click',checkClicked);
     }
   },[]);
 
+  const checkClicked = e => {
+    if(!ref.current)
+      return;
+
+    if(e.target !== ref.current.querySelector('input') && e.target.parentNode !== ref.current)
+    {
+      setIsVisible(false);
+    }
+  }
+
   const handleFocus = () => {
     setIsVisible(true);
-  };
-
-  const handleBlur = () => {
-    setIsVisible(false);
   };
 
   const handleChange = (val) => {
@@ -75,12 +87,11 @@ const Searchbar = () => {
 
   return(
     <Wrapper>
-      <span className="wrapper">
+      <span className="wrapper" ref={ref}>
         <input
         type="search"
         placeholder="Search for Pokemon"
         onFocus={handleFocus}
-        onBlur={handleBlur}
         onChange={e=>{setSearchPhrase(e.target.value);handleChange(e.target.value);}}
         value={searchPhrase}
         />

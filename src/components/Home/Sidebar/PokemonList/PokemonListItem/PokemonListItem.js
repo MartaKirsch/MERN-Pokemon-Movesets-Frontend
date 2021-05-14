@@ -6,7 +6,7 @@ import Type from 'components/Home/Sidebar/PokemonList/PokemonListItem/Type';
 const PokemonListItem = ({url,name,number,types}) => {
   return(
     <Wrapper>
-      <Link to="/">
+      <Link to={`/pokemon/${name}`}>
         <img src={url} alt=""/>
         <Info>
           <div className="pokename">{`#${number} ${name}`}</div>
