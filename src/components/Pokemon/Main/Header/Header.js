@@ -12,7 +12,7 @@ const Header = () => {
   return(
     <Wrapper>
       <Button>
-        <Link to="/">
+        <Link to="/" className="buttonLink">
           <div className="frame">
             <ArrowL/>
           </div>
@@ -20,10 +20,10 @@ const Header = () => {
         </Link>
       </Button>
 
-      {name}
+      <Link to={`/pokemon/${name}`}>{name}</Link>
 
       <Button>
-        <Link to="/">
+        <Link to="/" className="buttonLink">
           <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt=""/>
           <div className="frame">
             <ArrowR/>

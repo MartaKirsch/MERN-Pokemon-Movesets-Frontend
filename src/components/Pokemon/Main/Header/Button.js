@@ -5,7 +5,7 @@ const Button = styled.button`
   width:15%;
   height:90%;
 
-  a
+  a.buttonLink
   {
     width:100%;
     height:100%;
