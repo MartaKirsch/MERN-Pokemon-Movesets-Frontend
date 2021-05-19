@@ -2,16 +2,42 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
 
-  width:18%;
-  height:100%;
+  width: ${({mainForms})=>mainForms ? "18%" : "40%"};
+  margin: ${({mainForms})=>mainForms ? "0" : "0 0 0 auto"};
+  height:10vw;
   display: flex;
   flex-direction:column;
-  justify-content:space-between;
+  overflow-y:auto;
+
+  scrollbar-color: #7D8D9C transparent;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+   width: 0.5vw;
+  }
+
+  &::-webkit-scrollbar-track {
+   background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+   background: #7D8D9C;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+   background: #6c7c8b;
+  }
+
+  ul
+  {
+    display: flex;
+    flex-direction:column;
+  }
 
   button
   {
     width:100%;
-    height:28%;
+    height:2.65vw;
     font-size:1.2vw;
     text-transform:uppercase;
     display:flex;
@@ -21,6 +47,16 @@ const Wrapper = styled.div`
     color:black;
     position: relative;
     z-index:1;
+    margin: 0.5vw 0;
+  }
+
+  button:last-child
+  {
+    margin:0.5vw 0 0 0;
+  }
+  button:first-child
+  {
+    margin:0 0 0.5vw 0;
   }
 
   button:disabled

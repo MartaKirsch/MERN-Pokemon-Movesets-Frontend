@@ -10,7 +10,7 @@ const MainForms = () => {
   };
 
   return(
-    <Wrapper className="box">
+    <Wrapper className="box" mainForms>
       <button
       key="regular"
       onClick={handleClick}>

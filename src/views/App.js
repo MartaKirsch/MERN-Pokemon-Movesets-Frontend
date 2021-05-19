@@ -18,6 +18,7 @@ function App() {
             <Route path="/add"><h1>add</h1></Route>
             <Route path="/account"><h1>account</h1></Route>
             <Route path="/pokemon/:name" component={Pokemon}/>
+            <Route path="/moveset/:name"><Pokemon isMoveset={true}/></Route>
           </Switch>
         </Wrapper>
       </BrowserRouter>
