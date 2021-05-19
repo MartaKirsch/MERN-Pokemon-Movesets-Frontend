@@ -4,7 +4,7 @@ import Context from 'components/Pokemon/Context';
 
 const OtherForms = () => {
 
-  //array
+  // selectedForm - array
   const { selectedForm, setSelectedForm, numOfForms,species } = useContext(Context);
 
   const handleClick = e => {
@@ -17,17 +17,12 @@ const OtherForms = () => {
     <Wrapper>
     <ul>
       {
-        species.varieties.slice(1).filter(({pokemon:{name}})=>{
-          const alolanReg = /alola/;
-          const galarianReg = /galar/;
-
-          return !alolanReg.test(name) && !galarianReg.test(name)
-        }).map(({pokemon:{name}},i)=>
+        species.varieties.map(({pokemon:{name}},i)=>
         <button
         key={name}
         onClick={handleClick}
-        data-num={3+i}
-        className={selectedForm[3+i] ? "selected" : ""}
+        data-num={i}
+        className={selectedForm[i] ? "selected" : ""}
         >{name}</button>
         )
       }

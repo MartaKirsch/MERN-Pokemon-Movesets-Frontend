@@ -33,8 +33,11 @@ const Searchbar = () => {
       setIsPending(false);
 
     }).catch(err=>{
-      setIsPending(false);
-      setIsError(true);
+      if(err.name && err.name !== "AbortError")
+      {
+        setIsPending(false);
+        setIsError(true);
+      }
     });
 
 

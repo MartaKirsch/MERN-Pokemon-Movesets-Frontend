@@ -17,9 +17,9 @@ const Pokemon = ({isMoveset}) => {
   const [isError, setIsError] = useState(false);
 
   //state for context
-  const [selectedForm,setSelectedForm] = useState([true, false, false]);
+  const [selectedForm,setSelectedForm] = useState([true]);
   const [urls,setUrls] = useState([name]);
-  const [numOfForms,setNumOfForms] = useState(3);
+  const [numOfForms,setNumOfForms] = useState(1);
   const [pokemon,setPokemon] = useState({});
   const [species,setSpecies] = useState({});
   const [evolution,setEvolution] = useState({});
@@ -40,6 +40,7 @@ const Pokemon = ({isMoveset}) => {
     //check if this pokemon exists
     if(!isChecked)
     {
+
       axios.get(`/pokemon/checkIfExists/${name}`,{cancelToken:checkSource.token})
       .then(res=>{
 
@@ -60,8 +61,10 @@ const Pokemon = ({isMoveset}) => {
     //load all the data and pass to context
     if(isChecked)
     {
+
       const index = selectedForm.indexOf(true);
-      axios.get(`/pokemon/pokeInfo/${name}/${urls[index]}`,{cancelToken:source.token})
+
+      axios.post(`/pokemon/pokeInfo/${urls[index]}`, {species:name, cancelToken:source.token})
       .then(res=>{
 
         if(res.statusText!=="OK")
@@ -69,17 +72,19 @@ const Pokemon = ({isMoveset}) => {
 
         const len = res.data.species.varieties.length;
 
-        console.log(res.data);
-
         setPokemon(res.data.pokemon);
         setSpecies(res.data.species);
         setEvolution(res.data.evolution);
-        setNumOfForms(2+len);
+        setNumOfForms(len);
 
         let arr = [];
         res.data.species.varieties.forEach(({pokemon:{name}}) => {
           arr.push(name);
         });
+        if(JSON.stringify(arr)!==JSON.stringify(urls))
+        {
+          setSelectedForm([true]);
+        }
         setUrls(arr);
 
         setIsPending(false);
@@ -95,7 +100,7 @@ const Pokemon = ({isMoveset}) => {
       checkSource.cancel("Cancelling in cleanup (checkSource)");
       source.cancel("Cancelling in cleanup (source)");
     }
-  },[selectedForm, isChecked]);
+  },[selectedForm, isChecked, name]);
 
 
 

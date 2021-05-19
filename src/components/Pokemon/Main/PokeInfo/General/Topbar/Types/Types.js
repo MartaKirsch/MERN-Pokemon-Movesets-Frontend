@@ -1,10 +1,18 @@
+import { useContext } from 'react';
 import Wrapper from 'components/Pokemon/Main/PokeInfo/General/Topbar/Types/Wrapper';
+import Context from 'components/Pokemon/Context';
 
 const Types = () => {
+  const { pokemon } = useContext(Context);
   return(
     <Wrapper className="box">
-      <div className="type grass">grass</div>
-      <div className="type poison">poison</div>
+      {
+        pokemon.types.map(({type:{name}})=>
+          <div className={`type ${name}`} key={name}>{name}</div>
+        )
+      }
+
+
     </Wrapper>
   )
 };

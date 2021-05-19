@@ -8,7 +8,7 @@ const Topbar = () => {
   return(
     <Wrapper>
       <Image/>
-      <MainForms/>
+      {false && <MainForms/>}
       <Types/>
       <OtherForms/>
     </Wrapper>

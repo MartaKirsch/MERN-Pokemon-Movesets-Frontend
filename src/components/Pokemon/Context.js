@@ -12,7 +12,7 @@ const Context = React.createContext({
   species:{},
   setSpecies: ()=>{},
   evolution:{},
-  setEvolution: ()=>{},
+  setEvolution: ()=>{}
 });
 
 export default Context;
