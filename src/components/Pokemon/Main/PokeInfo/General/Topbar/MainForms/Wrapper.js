@@ -82,6 +82,10 @@ const Wrapper = styled.div`
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+  button.selected{
+    background-color:var(--pistachio);
+  }
 `;
 
 export default Wrapper;

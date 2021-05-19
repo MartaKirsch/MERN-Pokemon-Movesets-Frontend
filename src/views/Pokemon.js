@@ -6,7 +6,10 @@ import Context from 'components/Pokemon/Context';
 
 const Pokemon = ({isMoveset}) => {
 
-  const values = { isMoveset };
+  const [selectedForm,setSelectedForm] = useState([true, false, false]);
+  const [numOfForms,setNumOfForms] = useState(5);
+
+  const values = { isMoveset, selectedForm, setSelectedForm, numOfForms, setNumOfForms };
 
   return(
     <Wrapper>
