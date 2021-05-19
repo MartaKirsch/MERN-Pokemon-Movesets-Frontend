@@ -5,32 +5,33 @@ import Context from 'components/Pokemon/Context';
 const OtherForms = () => {
 
   //array
-  const { selectedForm, setSelectedForm, numOfForms } = useContext(Context);
+  const { selectedForm, setSelectedForm, numOfForms,species } = useContext(Context);
 
   const handleClick = e => {
-    let arr = new Array(numOfForms).fill(0);
-    arr[e.target.dataset.num]=1;
+    let arr = new Array(numOfForms).fill(false);
+    arr[e.target.dataset.num]=true;
     setSelectedForm(arr);
   };
 
   return(
     <Wrapper>
     <ul>
-      <button
-      key="mega-venusaur"
-      onClick={handleClick}
-      data-num="3"
-      className={selectedForm[3] ? "selected" : ""}
-      >
-      Mega Venusaur</button>
+      {
+        species.varieties.slice(1).filter(({pokemon:{name}})=>{
+          const alolanReg = /alola/;
+          const galarianReg = /galar/;
 
-      <button
-      key="venusaur-gmax"
-      onClick={handleClick}
-      data-num="4"
-      className={selectedForm[4] ? "selected" : ""}
-      >
-      Venusaur Gmax</button>
+          return !alolanReg.test(name) && !galarianReg.test(name)
+        }).map(({pokemon:{name}},i)=>
+        <button
+        key={name}
+        onClick={handleClick}
+        data-num={3+i}
+        className={selectedForm[3+i] ? "selected" : ""}
+        >{name}</button>
+        )
+      }
+
 
     </ul>
     </Wrapper>

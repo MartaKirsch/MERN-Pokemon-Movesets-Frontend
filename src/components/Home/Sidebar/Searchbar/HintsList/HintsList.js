@@ -6,7 +6,6 @@ import Error from 'components/Error/Error';
 
 const HintsList = ({display, isError, isPending, hints}) => {
 
-  //const hintsList = hints.map(hint=><li key={hint}><Link to={`/pokemon/${hint}`}>{hint}</Link></li>);
 
   return(
     <Wrapper display={display}>
@@ -18,7 +17,6 @@ const HintsList = ({display, isError, isPending, hints}) => {
             <Link to={`/pokemon/${hint}`}>{hint}</Link>
           </li>
         )
-        //!isError && hintsList
       }
     </Wrapper>
   );

@@ -29,7 +29,6 @@ const Searchbar = () => {
       {
         throw new Error("Error");
       }
-
       setPokedex(res.data.pokedex);
       setIsPending(false);
 
@@ -60,6 +59,7 @@ const Searchbar = () => {
   };
 
   const handleChange = (val) => {
+    setSearchPhrase(val);
 
     //check if the field is empty
     if(val==="")
@@ -92,7 +92,7 @@ const Searchbar = () => {
         type="search"
         placeholder="Search for Pokemon"
         onFocus={handleFocus}
-        onChange={e=>{setSearchPhrase(e.target.value);handleChange(e.target.value);}}
+        onChange={e=>handleChange(e.target.value)}
         value={searchPhrase}
         />
         <span className="line"></span>

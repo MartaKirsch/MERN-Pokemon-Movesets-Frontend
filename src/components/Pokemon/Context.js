@@ -7,6 +7,12 @@ const Context = React.createContext({
   setSelectedForm: ()=>{},
   numOfForms:[],
   setNumOfForms: ()=>{},
+  pokemon:{},
+  setPokemon: ()=>{},
+  species:{},
+  setSpecies: ()=>{},
+  evolution:{},
+  setEvolution: ()=>{},
 });
 
 export default Context;
