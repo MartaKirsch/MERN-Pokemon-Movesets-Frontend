@@ -117,7 +117,7 @@ const Pokemon = ({isMoveset}) => {
         </Context.Provider>
       }
       { (isPending && !isError) && <Loading display="true"/> }
-      { (isChecked && isError) && <Error display="true"/> }
+      { (isError) && <Error display="true"/> }
     </Wrapper>
   )
 };

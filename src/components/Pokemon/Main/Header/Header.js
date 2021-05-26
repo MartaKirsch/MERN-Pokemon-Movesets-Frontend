@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import { useParams } from "react-router-dom";
 import Wrapper from 'components/Pokemon/Main/Header/Wrapper';
 import Button from 'components/Pokemon/Main/Header/Button';
 import { Link } from 'react-router-dom';
@@ -9,7 +8,6 @@ import Context from 'components/Pokemon/Context';
 
 const Header = () => {
 
-  let { name } = useParams();
   const { species, pokemon } = useContext(Context);
 
 
