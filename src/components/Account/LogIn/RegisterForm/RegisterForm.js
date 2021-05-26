@@ -1,58 +1,81 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 import Wrapper from 'components/Account/LogIn/LogInForm/Wrapper';
 import Button from 'components/Account/LogIn/LogInForm/Button';
+import LoginInput from 'components/Account/LogIn/RegisterForm/Inputs/LoginInput';
+import EmailInput from 'components/Account/LogIn/RegisterForm/Inputs/EmailInput';
+import PasswordInput from 'components/Account/LogIn/RegisterForm/Inputs/PasswordInput';
+import Context from 'components/Account/LogIn/RegisterForm/Context';
+import Loading from 'components/Loading/Loading';
+import Error from 'components/Error/Error';
 
 const RegisterForm = () => {
+
+  let history = useHistory();
 
   const [login, setLogin] = useState("");
   const [email, setEmail] = useState("");
   const [passwd, setPasswd] = useState("");
-  const [errors, setErrors] = useState([0,0,0]);
+  const [errors, setErrors] = useState([1,1,1]);
+  const [inits, setInits] = useState([0,0,0]);
+
+  //register query
+  const [isPending, setIsPending] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  const values = { login, setLogin, email, setEmail, passwd, setPasswd, errors, setErrors, inits, setInits };
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('submit');
+
+    if(isError)
+      return;
+
+    const sum = errors.reduce((a, b) => a + b, 0);
+    if(sum!==0)
+      return;
+
+    //if no errors - register
+
+    setIsPending(true);
+
+    axios.post('/user/register',{login, email, passwd})
+    .then(res=>{
+      if(res.statusText!=="OK")
+        throw new Error('error happened!');
+
+      if(!res.data.registered)
+      {
+        setIsError(true);
+        setIsPending(false);
+      }
+      else
+      {
+        //redirect
+        setIsPending(false);
+        history.go(0);
+      }
+    })
+    .catch(err=>{
+      setIsPending(false);
+      setIsError(true);
+    })
+
   }
 
   return(
     <Wrapper onSubmit={handleSubmit}>
-      <Button/>
+      {(!isPending && !isError) && <Button/>}
+      {isPending && <Loading display="true"/>}
+      {isError && <Error display="true"/>}
+      <Context.Provider value={values}>
+        <LoginInput/>
+        <EmailInput/>
+        <PasswordInput/>
+      </Context.Provider>
 
-      <span className="wrapper">
-        <input
-        type="text"
-        placeholder="Login"
-        name="login"
-        value={login}
-        onChange={e=>setLogin(e.target.value)}
-        data-num="0"
-        />
-        <span className={errors[0] ? "line red" : "line"}></span>
-      </span>
 
-      <span className="wrapper">
-        <input
-        type="text"
-        placeholder="Email"
-        name="email"
-        value={email}
-        onChange={e=>setEmail(e.target.value)}
-        data-num="1"
-        />
-        <span className={errors[1] ? "line red" : "line"}></span>
-      </span>
-
-      <span className="wrapper">
-        <input
-        type="password"
-        placeholder="Password"
-        name="password"
-        value={passwd}
-        onChange={e=>setPasswd(e.target.value)}
-        data-num="2"
-        />
-        <span className={errors[2] ? "line red" : "line"}></span>
-      </span>
     </Wrapper>
   )
 };
