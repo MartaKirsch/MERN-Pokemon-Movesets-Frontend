@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import useCheck from 'hooks/useCheck';
 import Wrapper from 'components/Home/Wrapper';
@@ -12,7 +12,6 @@ import Error from 'components/Error/Error';
 const Pokemon = ({isMoveset}) => {
 
   const { name } = useParams();
-  let history = useHistory();
   // const [isChecked, setIsChecked] = useState(false);
   const [isPending, setIsPending] = useState(true);
   const [isError, setIsError] = useState(false);
