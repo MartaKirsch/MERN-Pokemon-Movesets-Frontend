@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
+import useCheck from 'hooks/useCheck';
 import Wrapper from 'components/Home/Wrapper';
 import Sidebar from 'components/Pokemon/Sidebar/Sidebar';
 import Main from 'components/Pokemon/Main/Main';
@@ -12,7 +13,7 @@ const Pokemon = ({isMoveset}) => {
 
   const { name } = useParams();
   let history = useHistory();
-  const [isChecked, setIsChecked] = useState(false);
+  // const [isChecked, setIsChecked] = useState(false);
   const [isPending, setIsPending] = useState(true);
   const [isError, setIsError] = useState(false);
 
@@ -27,39 +28,16 @@ const Pokemon = ({isMoveset}) => {
   const values = { isMoveset, selectedForm, setSelectedForm, numOfForms, pokemon,
   species, evolution };
 
+  //hook for checking - if pokemon exists
+  const { isOK: isChecked } = useCheck(`/pokemon/checkIfExists/${name}`,"/",true);
 
   useEffect(()=>{
 
     //reset the params
-    setIsPending(true);
-    setIsError(false);
-
-    let checkSource = axios.CancelToken.source();
     let source = axios.CancelToken.source();
 
-    //check if this pokemon exists
-    if(!isChecked)
-    {
-
-      axios.get(`/pokemon/checkIfExists/${name}`,{cancelToken:checkSource.token})
-      .then(res=>{
-
-        if(res.statusText!=="OK")
-          throw new Error('error happened!');
-
-        if(!res.data.exists)
-          history.push('/');
-
-        setIsChecked(true);
-      })
-      .catch(err=>{
-        history.push('/');
-      })
-
-    }
-
     //load all the data and pass to context
-    else
+    if(isChecked)
     {
 
       const index = selectedForm.indexOf(true);
@@ -101,7 +79,6 @@ const Pokemon = ({isMoveset}) => {
 
 
     return () => {
-      checkSource.cancel("Cancelling in cleanup (checkSource)");
       source.cancel("Cancelling in cleanup (source)");
     }
   },[selectedForm, isChecked, name]);

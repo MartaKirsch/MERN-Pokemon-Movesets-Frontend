@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
-const useCheck = (url, pushUrl="") => {
+const useCheck = (url, pushUrl="",pushOnErr=false) => {
   const [isOK, setIsOK] = useState(false);
   const [isPending, setIsPending] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -34,6 +34,8 @@ const useCheck = (url, pushUrl="") => {
     .catch(err=>{
       if(err.name !=="AbortError")
       {
+        if(pushOnErr && pushUrl!=="")
+          history.push(pushUrl);
         setIsError(true);
         setIsPending(false);
       }
