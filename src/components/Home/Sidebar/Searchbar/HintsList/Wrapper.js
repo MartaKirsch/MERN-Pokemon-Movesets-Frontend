@@ -36,13 +36,14 @@ const Wrapper = styled.ul`
 
   li
   {
-    font-size:1vw;
     width:100%;
     height:5vw;
   }
 
-  a
+  a, button
   {
+    color:black;
+    font-size:1vw;
     width:100%;
     height:100%;
     display:flex;
@@ -54,7 +55,7 @@ const Wrapper = styled.ul`
     z-index:1;
   }
 
-  a::after
+  a::after, button::after
   {
     content:'';
     width:100%;
@@ -67,7 +68,7 @@ const Wrapper = styled.ul`
     z-index:-1;
   }
 
-  a:hover::after, a:focus::after
+  a:hover::after, a:focus::after, button:hover::after, button:focus::after
   {
     transform:translateX(100%);
   }

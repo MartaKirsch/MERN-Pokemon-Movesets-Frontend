@@ -5,6 +5,7 @@ import Navbar from 'views/Navbar';
 import Home from 'views/Home';
 import Pokemon from 'views/Pokemon';
 import Account from 'views/Account';
+import Add from 'views/Add';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
           <Navbar/>
           <Switch>
             <Route exact path="/" component={Home}/>
-            <Route path="/add"><h1>add</h1></Route>
+            <Route path="/add" component={Add}/>
             <Route path="/account" component={Account}/>
             <Route path="/pokemon/:name" component={Pokemon}/>
             <Route path="/moveset/:name"><Pokemon isMoveset={true}/></Route>

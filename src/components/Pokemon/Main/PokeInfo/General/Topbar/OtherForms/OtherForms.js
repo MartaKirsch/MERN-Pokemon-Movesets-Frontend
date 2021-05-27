@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import Wrapper from 'components/Pokemon/Main/PokeInfo/General/Topbar/MainForms/Wrapper';
+import Wrapper from 'components/Pokemon/Main/PokeInfo/General/Topbar/OtherForms/Wrapper';
 import Context from 'components/Pokemon/Context';
 
 const OtherForms = () => {
