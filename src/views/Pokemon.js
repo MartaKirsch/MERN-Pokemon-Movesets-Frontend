@@ -38,6 +38,9 @@ const Pokemon = ({isMoveset}) => {
     //load all the data and pass to context
     if(isChecked)
     {
+      //reset query state
+      setIsError(false);
+      setIsPending(true);
 
       const index = selectedForm.indexOf(true);
 
@@ -69,7 +72,6 @@ const Pokemon = ({isMoveset}) => {
       .catch(err=>{
         if(err.name && err.name !== "AbortError")
         {
-          console.log(err);
           setIsError(true);
           setIsPending(false);
         }
