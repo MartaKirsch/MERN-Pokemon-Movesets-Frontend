@@ -3,27 +3,35 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
 
   display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  position:relative;
-  margin: 0 0 4vw 0;
+  justify-content:space-between;
+  margin: 0 0 2vw 0;
+  width:100%;
 
-  label
-  {
-    font-size:2vw;
-    color:white;
-    margin:0 0 1vw 0;
-  }
 
-  input
+
+  input, select
   {
-    width:30vw;
     height:3vw;
     border-radius:15px;
     border:none;
     color:black;
     padding: 0 1vw;
     font-size:1.1vw;
+  }
+
+  select, .textWrapper
+  {
+    width:40%;
+  }
+
+  input
+  {
+    width:100%;
+  }
+
+  .textWrapper
+  {
+    position:relative;
   }
 
   .line.red
@@ -56,6 +64,12 @@ const Wrapper = styled.div`
   {
     transform:scale(1);
   }
+
+  button{
+    background-color:var(--error_red);
+    
+  }
+
 `;
 
 export default Wrapper;

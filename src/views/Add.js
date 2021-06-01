@@ -16,7 +16,7 @@ const Add = () => {
   useEffect(()=>{
     if(!isPending && !isError && !isLoggedIn)
       history.push('/account');
-  },[isLoggedIn]);
+  },[isPending]);
 
   return(
     <Wrapper>

@@ -5,7 +5,7 @@ import Wrapper from 'components/Home/Sidebar/Searchbar/HintsList/Wrapper';
 import Loading from 'components/Loading/Loading';
 import Error from 'components/Error/Error';
 
-const HintsList = ({display, setter, url, input}) => {
+const HintsList = ({display, setter, url, input, validitySetter}) => {
 
   const { selectedHints, hints, isError, isPending } = useLoadHints(url,input);
 
@@ -13,6 +13,21 @@ const HintsList = ({display, setter, url, input}) => {
     e.preventDefault();
     setter(hint);
   }
+
+  useEffect(()=>{
+
+
+    if(input==="")
+      return;
+
+    //check if input is in hints list
+    if(hints.indexOf(input)===-1)
+      validitySetter(0);
+    else
+      validitySetter(1);
+
+
+  },[input]);
 
   return(
     <Wrapper display={display}>
@@ -28,5 +43,6 @@ const HintsList = ({display, setter, url, input}) => {
     </Wrapper>
   );
 };
+
 
 export default HintsList;
