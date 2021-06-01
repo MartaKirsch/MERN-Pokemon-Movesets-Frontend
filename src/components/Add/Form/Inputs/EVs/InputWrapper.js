@@ -4,6 +4,7 @@ const Wrapper = styled.div`
 
   display:flex;
   justify-content:space-between;
+  align-items:center;
   margin: 0 0 2vw 0;
   width:100%;
 
@@ -65,9 +66,11 @@ const Wrapper = styled.div`
     transform:scale(1);
   }
 
-  button{
+  select.err
+  {
     background-color:var(--error_red);
-    
+    color:white;
+    border:2px solid white;
   }
 
 `;

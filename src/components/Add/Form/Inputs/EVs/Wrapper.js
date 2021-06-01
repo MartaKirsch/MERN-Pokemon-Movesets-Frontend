@@ -4,8 +4,9 @@ const Wrapper = styled.div`
 
   display:flex;
   flex-direction:column;
+  align-items:center;
   margin: 0 0 4vw 0;
-  width:100%;
+  width:30vw;
 
   label
   {
