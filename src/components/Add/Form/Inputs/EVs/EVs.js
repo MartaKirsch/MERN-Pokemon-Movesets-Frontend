@@ -1,14 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Wrapper from 'components/Add/Form/Inputs/EVs/Wrapper';
 import EVsInput from 'components/Add/Form/Inputs/EVs/EVsInput';
 import EVsContext from 'components/Add/Form/Inputs/EVs/EVsContext';
 import Button from 'components/Add/Form/Inputs/EVs/Button';
+import FormContext from 'components/Add/Form/FormContext';
 
 const EVs = () => {
 
   const [stats, setStats] = useState([{name:"HP", num:""}]);
   const [selectErrors, setSelectErrors] = useState([false]);
   const [numErrors, setNumErrors] = useState([false]);
+
+  const { errors: formErrors, setErrors: setFormErrors } = useContext(FormContext);
 
   const values = {stats, setStats,selectErrors, setSelectErrors, numErrors, setNumErrors};
 
@@ -35,6 +38,19 @@ const EVs = () => {
     setSelectErrors(errorsArr);
   },[stats]);
 
+  //update global err array
+  useEffect(()=>{
+    let arr = selectErrors.concat(numErrors);
+
+    const sum = arr.reduce((a, b) => a + b, 0);
+    const error = sum===0 ? 0 : 1;
+
+    arr = [...formErrors];
+    arr[4] = error;
+    setFormErrors(arr);
+  },[selectErrors,numErrors]);
+
+  //add item
   const handleClick = e => {
     e.preventDefault();
 

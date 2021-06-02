@@ -6,6 +6,7 @@ import HeldItemInput from 'components/Add/Form/Inputs/HeldItemInput';
 import AbilityInput from 'components/Add/Form/Inputs/AbilityInput';
 import NatureInput from 'components/Add/Form/Inputs/NatureInput';
 import EVs from 'components/Add/Form/Inputs/EVs/EVs';
+import Moves from 'components/Add/Form/Inputs/Moves/Moves';
 
 const Form = () => {
 
@@ -14,7 +15,7 @@ const Form = () => {
   const [heldItem, setHeldItem] = useState("");
   const [ability, setAbility] = useState("");
   const [nature, setNature] = useState("");
-  const [errors, setErrors] = useState([0, 0, 0, 0]);
+  const [errors, setErrors] = useState([0, 0, 0, 0, 0, 0]);
 
   const values = {pokemon, setPokemon,errors, setErrors, heldItem, setHeldItem, ability, setAbility, nature, setNature};
 
@@ -32,6 +33,7 @@ const Form = () => {
         <AbilityInput/>
         <NatureInput/>
         <EVs/>
+        <Moves/>
         <button>Add Moveset</button>
       </FormContext.Provider>
     </Wrapper>

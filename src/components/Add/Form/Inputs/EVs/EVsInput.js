@@ -8,6 +8,7 @@ const EVsInput = ({first, index}) => {
   const {stats, setStats, selectErrors, setSelectErrors, numErrors, setNumErrors} = useContext(EVsContext);
 
 
+  //delete item
   const handleClick = e => {
     e.preventDefault();
 
@@ -25,7 +26,7 @@ const EVsInput = ({first, index}) => {
 
   };
 
-
+  //change selected option
   const handleSelectChange = e => {
     //set new stat name
     let arr = [...stats];
@@ -33,6 +34,7 @@ const EVsInput = ({first, index}) => {
     setStats(arr);
   };
 
+  //type in number
   const handleInputChange = e => {
     const val = e.target.value;
 
