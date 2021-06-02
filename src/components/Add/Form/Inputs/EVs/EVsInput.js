@@ -1,12 +1,13 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import EVsContext from 'components/Add/Form/Inputs/EVs/EVsContext';
+import FormContext from 'components/Add/Form/FormContext';
 import Wrapper from 'components/Add/Form/Inputs/EVs/InputWrapper';
 import Button from 'components/Add/Form/Inputs/EVs/Button';
 
 const EVsInput = ({first, index}) => {
 
-  const {stats, setStats, selectErrors, setSelectErrors, numErrors, setNumErrors} = useContext(EVsContext);
-
+  const {selectErrors, setSelectErrors, numErrors, setNumErrors} = useContext(EVsContext);
+  const { stats, setStats } = useContext(FormContext);
 
   //delete item
   const handleClick = e => {

@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     margin:0 0 1vw 0;
   }
 
-  input
+  input, textarea
   {
     width:30vw;
     height:3vw;
@@ -52,9 +52,23 @@ const Wrapper = styled.div`
     transition:transform 0.4s ease-out;
   }
 
-  input:focus + .line::after,input:hover + .line::after
+  input:focus + .line::after,input:hover + .line::after,
+  textarea:focus + .line::after,textarea:hover + .line::after
   {
     transform:scale(1);
+  }
+
+  textarea
+  {
+    height:10vw;
+    font-family:inherit;
+    padding:1vw;
+    resize: none;
+  }
+
+  textarea:focus
+  {
+    outline:none;
   }
 `;
 

@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useEffect } from 'react';
 import useLoadHints from 'hooks/useLoadHints';
 import Wrapper from 'components/Home/Sidebar/Searchbar/HintsList/Wrapper';
 import Loading from 'components/Loading/Loading';

@@ -7,10 +7,9 @@ import MovesContext from 'components/Add/Form/Inputs/Moves/MovesContext';
 
 const Moves = () => {
 
-  const [moves, setMoves] = useState([""]);
   const [errors, setErrors] = useState([false]);
 
-  const { errors: formErrors, setErrors: setFormErrors } = useContext(FormContext);
+  const { errors: formErrors, setErrors: setFormErrors, moves, setMoves } = useContext(FormContext);
 
   const values = {moves, setMoves, errors, setErrors};
 

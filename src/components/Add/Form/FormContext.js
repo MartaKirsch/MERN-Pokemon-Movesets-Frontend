@@ -8,7 +8,15 @@ const FormContext = React.createContext({
   ability: "",
   setAbility: ()=>{},
   nature: "",
-  setNature: ()=>{}
+  setNature: ()=>{},
+  name: "",
+  setName: ()=>{},
+  description: "",
+  setDescription: ()=>{},
+  stats: "",
+  setStats: ()=>{},
+  moves: "",
+  setMoves: ()=>{}
 });
 
 export default FormContext;

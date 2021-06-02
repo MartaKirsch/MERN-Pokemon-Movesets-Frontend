@@ -7,13 +7,12 @@ import FormContext from 'components/Add/Form/FormContext';
 
 const EVs = () => {
 
-  const [stats, setStats] = useState([{name:"HP", num:""}]);
   const [selectErrors, setSelectErrors] = useState([false]);
   const [numErrors, setNumErrors] = useState([false]);
 
-  const { errors: formErrors, setErrors: setFormErrors } = useContext(FormContext);
+  const { errors: formErrors, setErrors: setFormErrors, stats, setStats } = useContext(FormContext);
 
-  const values = {stats, setStats,selectErrors, setSelectErrors, numErrors, setNumErrors};
+  const values = {selectErrors, setSelectErrors, numErrors, setNumErrors};
 
   useEffect(()=>{
     //reset error in select errors array
@@ -22,6 +21,7 @@ const EVs = () => {
     //check if there are any with same name
     let vals = [];
     let arr = [...stats];
+
     arr.forEach((item, i) => {
       //new value
       if(vals.indexOf(item.name)===-1)
@@ -43,7 +43,20 @@ const EVs = () => {
     let arr = selectErrors.concat(numErrors);
 
     const sum = arr.reduce((a, b) => a + b, 0);
-    const error = sum===0 ? 0 : 1;
+    let error = sum===0 ? 0 : 1;
+
+    //check if overall sum of evs is <=508
+    if(sum===0)
+    {
+      const evsArr = [...stats];
+      let evsSum = 0;
+      evsArr.forEach(item => {
+        evsSum+=parseInt(item.num);
+      });
+
+      if(evsSum>508)
+        error=1;
+    }
 
     arr = [...formErrors];
     arr[4] = error;
@@ -61,6 +74,10 @@ const EVs = () => {
     let selectErrArr = [...selectErrors];
     selectErrArr.push(false);
     setSelectErrors(selectErrArr);
+
+    let numErrArr = [...numErrors];
+    numErrArr.push(false);
+    setNumErrors(numErrArr);
   }
 
 

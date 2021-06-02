@@ -26,6 +26,7 @@ const Wrapper = styled.form`
   &::-webkit-scrollbar-thumb:hover {
    background: #6c7c8b;
   }
+
 `;
 
 export default Wrapper;

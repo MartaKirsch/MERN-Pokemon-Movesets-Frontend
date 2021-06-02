@@ -3,14 +3,14 @@ import styled from 'styled-components';
 const LoadMoreButton = styled.button`
   font-size:1.5vw;
   background-color:var(--pistachio);
-  width:70%;
+  width: ${({form}) => form ? "15%" : "70%"};
   display:flex;
   align-items:center;
   justify-content:center;
   padding: 1vw 0;
   text-shadow: 1px 1px 2px #CE5937,1px 1px 2px #CE5937,1px 1px 2px #CE5937,1px 1px 2px #CE5937;
   border-radius:15px;
-  margin:2vw 0;
+  margin:${({form}) => form==="true" ? "0 0 2vw" : "2vw 0"};
   z-index:1;
   position:relative;
 
