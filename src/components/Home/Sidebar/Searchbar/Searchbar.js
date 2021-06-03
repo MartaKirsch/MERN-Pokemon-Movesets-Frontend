@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
+import { useState, useRef } from 'react';
 import Wrapper from 'components/Home/Sidebar/Searchbar/Wrapper';
 import HintsList from 'components/Home/Sidebar/Searchbar/HintsList/HintsList';
 import useHideHints from 'hooks/useHideHints';

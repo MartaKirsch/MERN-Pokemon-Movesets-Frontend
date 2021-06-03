@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const LoadMoreButton = styled.button`
   font-size:1.5vw;
   background-color:var(--pistachio);
-  width: ${({form}) => form ? "15%" : "70%"};
+  width: ${({isForm}) => isForm ? "15%" : "70%"};
   display:flex;
   align-items:center;
   justify-content:center;

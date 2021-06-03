@@ -66,6 +66,25 @@ const Wrapper = styled.li`
     transform-origin: bottom left;
   }
 
+  .pokename
+  {
+    font-size:1.2vw;
+    color:var(--medGrey);
+  }
+
+  .imgWrapper
+  {
+    width:2vw;
+    height:2vw;
+    margin: auto 0 auto auto;
+  }
+
+  .imgWrapper img
+  {
+    width:100%;
+    height:auto;
+  }
+
 `;
 
 export default Wrapper;

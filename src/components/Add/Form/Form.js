@@ -45,7 +45,7 @@ const Form = () => {
 
     let arr = [...errors];
     const sum = arr.reduce((a, b) => a + b, 0);
-
+    console.log(errors);
     //if any errors - return
     if(sum!==0)
       return;
@@ -105,7 +105,7 @@ const Form = () => {
         <Moves/>
         <NameInput/>
         <DescriptionInput/>
-        <LoadMoreButton form="true" disabled={disabled}>Add Moveset</LoadMoreButton>
+        <LoadMoreButton type="submit" disabled={disabled} isForm="true">Add Moveset</LoadMoreButton>
       </FormContext.Provider>}
       {(!isPending && isError) && <Error display="true"/>}
       {(isPending && !isError) && <Loading display="true"/>}

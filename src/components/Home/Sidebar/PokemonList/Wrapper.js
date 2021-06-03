@@ -35,6 +35,11 @@ const Wrapper = styled.div`
   &::-webkit-scrollbar-thumb:hover {
    background: #6c7c8b;
   }
+  
+  h2
+  {
+    color:white;
+  }
 `;
 
 export default Wrapper;

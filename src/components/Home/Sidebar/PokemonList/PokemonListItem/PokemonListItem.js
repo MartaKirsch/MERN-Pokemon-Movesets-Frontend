@@ -9,7 +9,7 @@ const PokemonListItem = ({url,name,number,types}) => {
       <Link to={`/pokemon/${name}`}>
         <img src={url} alt=""/>
         <Info>
-          <div className="pokename">{`#${number} ${name}`}</div>
+          <div>{`#${number} ${name}`}</div>
           <Type>
             {
               types.map(type => <div key={type} className={type}>{type}</div>)

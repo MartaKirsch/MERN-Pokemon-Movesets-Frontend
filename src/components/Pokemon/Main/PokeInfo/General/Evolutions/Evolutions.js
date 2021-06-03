@@ -17,7 +17,7 @@ const Evolutions = () => {
     let texts = []
     let num = 1;
     const details = item.evolution_details[0];
-
+    
     let text = "";
 
     //trigger is level up and level is not set
@@ -29,7 +29,7 @@ const Evolutions = () => {
       text="Level "+details.min_level;
 
     //trigger is held item
-    else if(details.trigger.name ==="use-item")
+    else if(details.item && details.trigger.name ==="use-item")
       text="Use "+details.item.name;
 
     //trigger is by trade
