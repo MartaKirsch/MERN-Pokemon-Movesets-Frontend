@@ -52,10 +52,12 @@ const useLoadHints = (url, input) => {
   useEffect(()=>{
     let mounted = true;
 
-    //select based on input
-    if(input==="")
+    //check if input isn't containing troublesome chars
+    const charsReg = /^\w{1,}$/;
+    if(!charsReg.test(input) && input!=="")
       return;
 
+    //select based on input
     let selected = [];
     const reg = new RegExp('^'+input);
     hints.forEach(item => {

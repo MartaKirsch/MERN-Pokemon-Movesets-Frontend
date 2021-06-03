@@ -11,7 +11,7 @@ const Searchbar = () => {
   const [searchPhrase, setSearchPhrase] = useState("");
 
   const { isVisible, setIsVisible } = useHideHints(ref);
-  const { selectedHints, hints, isError, isPending } = useLoadHints(`/pokemon/loadFullPokedex`,searchPhrase);
+  const { selectedHints, isError, isPending } = useLoadHints(`/pokemon/loadFullPokedex`,searchPhrase);
 
   const handleFocus = () => {
     setIsVisible(true);
