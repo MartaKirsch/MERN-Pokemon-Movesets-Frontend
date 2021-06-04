@@ -25,7 +25,7 @@ const Pokemon = ({isMoveset}) => {
   const [evolution,setEvolution] = useState({});
 
   const values = { isMoveset, selectedForm, setSelectedForm, numOfForms, pokemon,
-  species, evolution };
+  species, evolution, urls };
 
   //hook for checking - if pokemon exists
   const { isOK: isChecked } = useCheck(`/pokemon/checkIfExists/${name}`,"/",true);

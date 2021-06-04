@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Context = React.createContext({
-  isMoveset:false,
   setIsMoveset: ()=>{},
   selectedForm:[],
   setSelectedForm: ()=>{},
@@ -12,7 +11,8 @@ const Context = React.createContext({
   species:{},
   setSpecies: ()=>{},
   evolution:{},
-  setEvolution: ()=>{}
+  setEvolution: ()=>{},
+  urls:[]
 });
 
 export default Context;

@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   const [pokemon, setPokemon] = useState("");
 
-  const { pokemon: pokeName } = useContext(Context);
+  const { urls, selectedForm } = useContext(Context);
 
   const values = {pokemon, setPokemon};
 
@@ -17,7 +17,7 @@ const Sidebar = () => {
     <Wrapper>
       <SidebarContext.Provider value={values}>
         <Searchbar hintsVisible={false}/>
-        <MovesetsList url="/moveset/loadList" pokeName={pokeName.name}/>
+        <MovesetsList url="/moveset/loadList" pokeName={urls[selectedForm.indexOf(true)]}/>
       </SidebarContext.Provider>
     </Wrapper>
   );

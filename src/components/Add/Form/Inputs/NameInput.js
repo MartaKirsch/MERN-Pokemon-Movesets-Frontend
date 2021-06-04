@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import FormContext from 'components/Add/Form/FormContext';
 import Wrapper from 'components/Add/Form/Inputs/Wrapper';
 import useCheck from 'hooks/useCheck';
@@ -7,18 +7,28 @@ const NameInput = () => {
 
   const { name, setName, errors, setErrors, pokemon } = useContext(FormContext);
 
+  const [lengthValid, setLengthValid] = useState(true);
+
   const { isOK: isValid } = useCheck(`/moveset/exists/${name}/${pokemon}`);
 
   useEffect(()=>{
     let arr = [...errors];
 
-    if(!isValid)
+    if(!isValid || !lengthValid)
       arr[6]=1;
     else
       arr[6]=0;
-
+    
     setErrors(arr);
-  },[isValid]);
+  },[isValid, lengthValid]);
+
+  useEffect(()=>
+  {
+    if(name.length>20)
+      setLengthValid(false);
+    else
+      setLengthValid(true);
+  },[name]);
 
   return(
     <Wrapper>
@@ -31,7 +41,7 @@ const NameInput = () => {
       onChange={e=>setName(e.target.value)}
       required
       />
-      <span className={isValid ? "line" : "line red"}></span>
+      <span className={(isValid && lengthValid) ? "line" : "line red"}></span>
     </Wrapper>
   )
 };

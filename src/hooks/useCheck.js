@@ -49,7 +49,7 @@ const useCheck = (url, pushUrl="",pushOnErr=false) => {
 
   },[url]);
 
-  return { isPending, isError, isOK };
+  return { isPending, isError, isOK, setIsOK };
 };
 
 export default useCheck;
