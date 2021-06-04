@@ -45,7 +45,7 @@ const Form = () => {
 
     let arr = [...errors];
     const sum = arr.reduce((a, b) => a + b, 0);
-    console.log(errors);
+
     //if any errors - return
     if(sum!==0)
       return;
@@ -64,12 +64,12 @@ const Form = () => {
       evs:stats,
       moves
     };
-
+    console.log(data);
     axios.post('/moveset', data)
     .then(res=>{
       if(res.statusText!=="OK")
         throw new Error('error happened!');
-
+      
       if(res.data.saved)
         history.push('/account');
       else

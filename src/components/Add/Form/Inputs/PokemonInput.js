@@ -7,31 +7,11 @@ import useHideHints from 'hooks/useHideHints';
 const PokemonInput = () => {
 
   const { pokemon, setPokemon, errors, setErrors } = useContext(FormContext);
-  // const [isVisible, setIsVisible] = useState(false);
-  //
+
   const ref = useRef(null);
   const { isVisible, setIsVisible } = useHideHints(ref);
 
   const [isValid, setIsValid] = useState(1);
-  //
-  // //add event for showing/hiding hints
-  // useEffect(()=>{
-  //   window.addEventListener('click',checkClicked);
-  //
-  //   return () => {
-  //     window.removeEventListener('click',checkClicked);
-  //   }
-  // },[]);
-  //
-  // const checkClicked = e => {
-  //   if(!ref.current)
-  //     return;
-  //
-  //   if(e.target !== ref.current.querySelector('input') && e.target.parentNode !== ref.current)
-  //   {
-  //     setIsVisible(false);
-  //   }
-  // }
 
   //for change in pokemon - check if the name is valid
   useEffect(()=>{
