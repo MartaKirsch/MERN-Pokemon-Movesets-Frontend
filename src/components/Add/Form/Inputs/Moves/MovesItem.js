@@ -8,8 +8,8 @@ import useHideHints from 'hooks/useHideHints';
 
 const MovesItem = ({index, first}) => {
 
-  const { moves, setMoves, errors, setErrors } = useContext(MovesContext);
-  const { errors: formErrors, pokemon } = useContext(FormContext);
+  const { errors, setErrors } = useContext(MovesContext);
+  const { errors: formErrors, pokemon, moves, setMoves } = useContext(FormContext);
   const ref = useRef(null);
   const { isVisible, setIsVisible } = useHideHints(ref);
   const [isValid, setIsValid] = useState(1);
@@ -60,7 +60,7 @@ const MovesItem = ({index, first}) => {
         onFocus={e=>setIsVisible(!isVisible)}
         required
         />
-        <span className={isValid===1 ? "line" : "line red"}></span>
+        <span className={!errors[index] ? "line" : "line red"}></span>
         { (formErrors[0]===0 && pokemon!=="") && <HintsList
         display={isVisible.toString()}
         setter={setMove}

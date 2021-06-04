@@ -9,10 +9,11 @@ const Moves = () => {
 
   const [errors, setErrors] = useState([false]);
 
-  const { errors: formErrors, setErrors: setFormErrors, moves, setMoves } = useContext(FormContext);
+  const { errors: formErrors, setErrors: setFormErrors, moves, setMoves, pokemon } = useContext(FormContext);
 
-  const values = {moves, setMoves, errors, setErrors};
+  const values = {errors, setErrors};
 
+  //on change of self errors - update form errors
   useEffect(()=>{
     const sum = errors.reduce((a, b) => a + b, 0);
     const error = sum===0 ? 0 : 1;
@@ -34,6 +35,11 @@ const Moves = () => {
     errArr.push(false);
     setErrors(errArr);
   }
+
+  //on pokemon change reset errors arr
+  useEffect(()=>{
+    setErrors([false]);
+  },[pokemon]);
 
 
   return(

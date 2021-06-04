@@ -9,12 +9,17 @@ const EVs = () => {
 
   const [selectErrors, setSelectErrors] = useState([false]);
   const [numErrors, setNumErrors] = useState([false]);
+  const [isSumErr, setIsSumErr] = useState(false);
 
-  const { errors: formErrors, setErrors: setFormErrors, stats, setStats } = useContext(FormContext);
+  const { errors: formErrors, setErrors: setFormErrors, stats, setStats, pokemon } = useContext(FormContext);
 
   const values = {selectErrors, setSelectErrors, numErrors, setNumErrors};
 
+  //on stats change (look for select errors)
   useEffect(()=>{
+    //reset sum of evs error
+    setIsSumErr(false);
+
     //reset error in select errors array
     let errorsArr = new Array(selectErrors.length).fill(false);
 
@@ -36,28 +41,42 @@ const EVs = () => {
       }
     });
     setSelectErrors(errorsArr);
+
+    //check if overall sum of evs is <=510
+
+    let evsSum = 0;
+    arr.forEach(item => {
+      evsSum+=parseInt(item.num);
+    });
+
+    if(evsSum>510)
+    {
+      arr = [...formErrors];
+      arr[4] = 1;
+      setFormErrors(arr);
+
+      setIsSumErr(true);
+    }
   },[stats]);
 
-  //update global err array
+  //update global err array (form) on self errors change
   useEffect(()=>{
     let arr = selectErrors.concat(numErrors);
 
     const sum = arr.reduce((a, b) => a + b, 0);
     let error = sum===0 ? 0 : 1;
 
-    //check if overall sum of evs is <=508
-    if(sum===0)
+    let evsSum = 0;
+    let arr2 = [...stats];
+    arr2.forEach(item => {
+      evsSum+=parseInt(item.num);
+    });
+
+    if(evsSum>510)
     {
-      const evsArr = [...stats];
-      let evsSum = 0;
-      evsArr.forEach(item => {
-        evsSum+=parseInt(item.num);
-      });
-
-      if(evsSum>508)
-        error=1;
+      error = 1;
+      setIsSumErr(true);
     }
-
     arr = [...formErrors];
     arr[4] = error;
     setFormErrors(arr);
@@ -80,10 +99,15 @@ const EVs = () => {
     setNumErrors(numErrArr);
   }
 
+  //on pokemon change reset errors arr
+  useEffect(()=>{
+    setSelectErrors([false]);
+    setNumErrors([false]);
+  },[pokemon]);
 
   return(
     <Wrapper>
-      <label>EVs</label>
+      <label className={isSumErr ? "sumErr" : ""}>EVs</label>
       <EVsContext.Provider value={values}>
         {
           stats.map((item,i)=>{

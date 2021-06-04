@@ -64,12 +64,12 @@ const Form = () => {
       evs:stats,
       moves
     };
-    console.log(data);
+
     axios.post('/moveset', data)
     .then(res=>{
       if(res.statusText!=="OK")
         throw new Error('error happened!');
-      
+
       if(res.data.saved)
         history.push('/account');
       else
@@ -93,6 +93,18 @@ const Form = () => {
     else
       setDisabled(true);
   },[errors]);
+
+  //on change of pokemon - reset other data
+  useEffect(()=>{
+    setHeldItem("");
+    setAbility("");
+    setNature("");
+    setName("");
+    setDescription("");
+    setMoves([""]);
+    setStats([{name:"HP", num:""}]);
+    setErrors([0, 0, 0, 0, 0, 0, 0, 0]);
+  },[pokemon]);
 
   return(
     <Wrapper onSubmit={handleSubmit} autocomplete="off">
