@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   display: flex;
   padding:2vw;
   justify-content:flex-start;
+  align-items:center;
 
   .box
   {

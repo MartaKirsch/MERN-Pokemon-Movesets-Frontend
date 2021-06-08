@@ -43,7 +43,7 @@ const Moveset = () => {
 
         if(res.statusText!=="OK")
           throw new Error('error happened!');
-        
+
         setMoveset(res.data.moveset);
         setPokemonData(res.data.pokemon);
         setSpecies(res.data.species);

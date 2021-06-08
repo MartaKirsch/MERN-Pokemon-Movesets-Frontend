@@ -13,7 +13,7 @@ const Sidebar = () => {
   return(
     <Wrapper>
       <SidebarContext.Provider value={values}>
-        <Searchbar/>
+        <Searchbar placeholder="Search for pokemon"/>
         <MovesetsList url="/moveset/loadUsersList"/>
       </SidebarContext.Provider>
     </Wrapper>

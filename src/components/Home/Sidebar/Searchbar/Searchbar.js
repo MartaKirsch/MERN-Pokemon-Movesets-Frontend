@@ -21,7 +21,7 @@ const Searchbar = () => {
       <span className="wrapper" ref={ref}>
         <input
         type="search"
-        placeholder="Search for Pokemon"
+        placeholder="Search for pokemon"
         onFocus={handleFocus}
         onChange={e=>setSearchPhrase(e.target.value)}
         value={searchPhrase}

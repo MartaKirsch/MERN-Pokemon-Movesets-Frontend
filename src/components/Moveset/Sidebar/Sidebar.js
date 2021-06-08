@@ -16,8 +16,8 @@ const Sidebar = () => {
   return(
     <Wrapper>
       <SidebarContext.Provider value={values}>
-        <Searchbar/>
-        <MovesetsList url="/moveset/loadList" pokeName={urlPokemon}/>
+        <Searchbar hintsVisible={false}/>
+        <MovesetsList url="/moveset/loadList" pokeName={urlPokemon} />
       </SidebarContext.Provider>
     </Wrapper>
   );

@@ -5,7 +5,7 @@ import SidebarContext from 'components/Account/UserAccount/Sidebar/SidebarContex
 import useHideHints from 'hooks/useHideHints';
 import useLoadHints from 'hooks/useLoadHints';
 
-const Searchbar = ({hintsVisible}) => {
+const Searchbar = ({hintsVisible, placeholder}) => {
 
   const ref = useRef(null);
 
@@ -18,7 +18,7 @@ const Searchbar = ({hintsVisible}) => {
       <span className="wrapper" ref={ref}>
         <input
         type="search"
-        placeholder="Search for Moveset"
+        placeholder={placeholder}
         onFocus={e=>setIsVisible(true)}
         onChange={e=>setPokemon(e.target.value)}
         value={pokemon}
@@ -36,7 +36,8 @@ const Searchbar = ({hintsVisible}) => {
 };
 
 Searchbar.defaultProps = {
-  hintsVisible: true
+  hintsVisible: true,
+  placeholder: "Search for moveset"
 };
 
 export default Searchbar;

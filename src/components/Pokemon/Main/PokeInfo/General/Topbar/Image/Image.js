@@ -1,10 +1,6 @@
-import { useContext } from 'react';
 import Wrapper from 'components/Pokemon/Main/PokeInfo/General/Topbar/Image/Wrapper';
-import Context from 'components/Pokemon/Context';
 
-const Image = () => {
-
-  const { pokemon } = useContext(Context);
+const Image = ({ pokemon }) => {
 
   return(
     <Wrapper>

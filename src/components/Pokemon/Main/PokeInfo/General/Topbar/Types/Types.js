@@ -1,9 +1,6 @@
-import { useContext } from 'react';
 import Wrapper from 'components/Pokemon/Main/PokeInfo/General/Topbar/Types/Wrapper';
-import Context from 'components/Pokemon/Context';
 
-const Types = () => {
-  const { pokemon } = useContext(Context);
+const Types = ({ pokemon }) => {
   return(
     <Wrapper className="box">
       {

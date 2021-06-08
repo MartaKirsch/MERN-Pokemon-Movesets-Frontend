@@ -5,11 +5,11 @@ import Context from 'components/Moveset/Context';
 
 const Header = () => {
 
-  const { species } = useContext(Context);
+  const { species, pokemonData } = useContext(Context);
 
   return(
     <Wrapper isMoveset>
-      <Link to={`/pokemon/${species.name}`}>{species.name}</Link>
+      <Link to={`/pokemon/${species.name}`}>{pokemonData.name}</Link>
     </Wrapper>
   )
 };
