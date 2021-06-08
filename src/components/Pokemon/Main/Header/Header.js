@@ -14,12 +14,12 @@ const Header = () => {
   const { id } = species;
 
   let nextId = id+1;
-  if (nextId === 899)
-    nextId--;
+  if (nextId >= 899)
+    nextId=898;
 
   let prevId = id-1;
-  if (prevId === 0)
-    prevId++;
+  if (prevId <= 0)
+    prevId=1;
 
   return(
     <Wrapper>

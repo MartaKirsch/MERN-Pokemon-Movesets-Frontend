@@ -4,6 +4,7 @@ import Wrapper from 'components/Wrapper';
 import Navbar from 'views/Navbar';
 import Home from 'views/Home';
 import Pokemon from 'views/Pokemon';
+import Moveset from 'views/Moveset';
 import Account from 'views/Account';
 import Add from 'views/Add';
 
@@ -20,7 +21,7 @@ function App() {
             <Route path="/add" component={Add}/>
             <Route path="/account" component={Account}/>
             <Route path="/pokemon/:name" component={Pokemon}/>
-            <Route path="/moveset/:name"><Pokemon isMoveset={true}/></Route>
+            <Route path="/moveset/:name/:id" component={Moveset}></Route>
           </Switch>
         </Wrapper>
       </BrowserRouter>

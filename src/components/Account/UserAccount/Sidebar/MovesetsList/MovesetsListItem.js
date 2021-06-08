@@ -5,7 +5,7 @@ import Info from 'components/Home/Sidebar/PokemonList/PokemonListItem/Info';
 const MovesetsListItem = ({url,pokemon,name,id}) => {
   return(
     <Wrapper>
-      <Link to={`/moveset/${id}`}>
+      <Link to={`/moveset/${pokemon}/${id}`}>
         <img src={url} alt=""/>
         <Info>
           <div className="movesetName">{name}</div>
