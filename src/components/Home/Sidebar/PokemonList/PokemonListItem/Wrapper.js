@@ -3,14 +3,16 @@ import styled from 'styled-components';
 const Wrapper = styled.li`
 
   width:80%;
-  height:7vw;
-  background-color:var(--grey);
+  height: ${({showUpdateDeleteBtns})=> showUpdateDeleteBtns ? "8.5vw" : "7vw"} ;
   margin: 1vw 0;
   border-radius:15px;
   position:relative;
+  display:flex;
+  flex-direction:column;
 
-  a
+  a, .messageWrapper
   {
+    background-color:var(--grey);
     border-radius:15px;
     padding:1vw;
     width:100%;
@@ -52,7 +54,9 @@ const Wrapper = styled.li`
     position:absolute;
     width:96%;
     left:2%;
+    bottom: -0.25vw ;
     height:6px;
+    z-index:2;
     border-radius:15px;
     background-color:var(--blue);
     transform:scaleX(0);
@@ -85,6 +89,39 @@ const Wrapper = styled.li`
     height:auto;
   }
 
+  .messageWrapper
+  {
+    flex-direction:column;
+    align-items:center;
+    justify-content: space-between;
+    font-size:1vw;
+  }
+
+  .messageWrapper button
+  {
+    padding:0.5vw 1vw;
+    font-size:0.8vw;
+    border-radius:15px;
+  }
+
+  .buttonsWrapper
+  {
+    display:flex;
+    width:50%;
+    justify-content:space-around;
+  }
+
+  button.no
+  {
+    color:black;
+    background-color:var(--pistachio);
+  }
+
+  button.yes
+  {
+    color:white;
+    background-color:var(--error_red);
+  }
 `;
 
 export default Wrapper;

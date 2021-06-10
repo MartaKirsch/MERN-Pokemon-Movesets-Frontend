@@ -7,7 +7,7 @@ import Error from 'components/Error/Error';
 import useLoadMovesets from 'hooks/useLoadMovesets';
 
 
-const MovesetsList = ({url, pokeName}) => {
+const MovesetsList = ({url, pokeName,showUpdateDeleteBtns}) => {
 
   const listRef = useRef(null);
 
@@ -26,6 +26,7 @@ const MovesetsList = ({url, pokeName}) => {
             name={item.name}
             pokemon={item.pokemon}
             id={item._id}
+            showUpdateDeleteBtns={showUpdateDeleteBtns}
             />
           ))
         }
@@ -42,7 +43,8 @@ const MovesetsList = ({url, pokeName}) => {
 
 
 MovesetsList.defaultProps = {
-  pokeName:""
+  pokeName:"",
+  showUpdateDeleteBtns:false
 };
 
 export default MovesetsList;
