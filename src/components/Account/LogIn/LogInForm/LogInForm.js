@@ -53,7 +53,16 @@ const LogInForm = () => {
       {
         //redirect
         setIsPending(false);
-        history.go(0);
+
+        //check if redirect was forced
+        if(sessionStorage.getItem('redirectUrl'))
+        {
+          const url = sessionStorage.getItem('redirectUrl');
+          sessionStorage.removeItem('redirectUrl');
+          history.push(url);
+        }
+        else
+          history.go(0);
       }
     })
     .catch(err=>{

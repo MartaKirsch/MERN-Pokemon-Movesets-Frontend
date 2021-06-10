@@ -15,7 +15,10 @@ const Add = () => {
 
   useEffect(()=>{
     if(!isPending && !isError && !isLoggedIn)
+    {
+      sessionStorage.setItem('redirectUrl', '/add');
       history.push('/account');
+    }
   },[isPending]);
 
   return(

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
-const useCheck = (url, pushUrl="",pushOnErr=false) => {
+const useCheck = (url, pushUrl="", pushOnErr=false) => {
   const [isOK, setIsOK] = useState(false);
   const [isPending, setIsPending] = useState(true);
   const [isError, setIsError] = useState(false);
