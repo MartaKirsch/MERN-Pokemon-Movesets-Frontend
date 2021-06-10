@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
-const useCheck = (url, pushUrl="", pushOnErr=false) => {
+const useCheckPost = (url,data, pushUrl="", pushOnErr=false) => {
   const [isOK, setIsOK] = useState(false);
   const [isPending, setIsPending] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -17,8 +17,7 @@ const useCheck = (url, pushUrl="", pushOnErr=false) => {
 
     let checkSource = axios.CancelToken.source();
 
-
-    axios.get(url,{cancelToken:checkSource.token})
+    axios.post(url,{...data,cancelToken:checkSource.token})
     .then(res=>{
 
       if(res.statusText!=="OK")
@@ -38,7 +37,7 @@ const useCheck = (url, pushUrl="", pushOnErr=false) => {
     .catch(err=>{
       if(err.name !=="AbortError" && err.message!=="Cancelling in cleanup (checkSource)")
       {
-        
+
         if(pushOnErr && pushUrl!=="")
           history.push(pushUrl);
         setIsError(true);
@@ -52,9 +51,9 @@ const useCheck = (url, pushUrl="", pushOnErr=false) => {
       checkSource.cancel("Cancelling in cleanup (checkSource)");
     }
 
-  },[]);
+  },[data.name]);
 
   return { isPending, isError, isOK, setIsOK, additional };
 };
 
-export default useCheck;
+export default useCheckPost;

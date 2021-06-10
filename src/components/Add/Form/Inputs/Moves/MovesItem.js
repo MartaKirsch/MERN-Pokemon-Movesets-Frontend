@@ -16,6 +16,8 @@ const MovesItem = ({index, first}) => {
 
   const [move, setMove] = useState("");
 
+  const [wasFocused, setWasFocused] = useState(false);
+
   useEffect(()=>{
     let arr = [...errors];
 
@@ -29,9 +31,12 @@ const MovesItem = ({index, first}) => {
 
   //update global arr of moves
   useEffect(()=>{
-    let arr = [...moves];
-    arr[index] = move;
-    setMoves(arr);
+    if(wasFocused)
+    {
+      let arr = [...moves];
+      arr[index] = move;
+      setMoves(arr);
+    }
   },[move]);
 
   //delete item
@@ -57,7 +62,7 @@ const MovesItem = ({index, first}) => {
         placeholder="Enter Move"
         value={moves[index]}
         onChange={e=>setMove(e.target.value)}
-        onFocus={e=>setIsVisible(!isVisible)}
+        onFocus={e=>{setIsVisible(!isVisible);setWasFocused(true);}}
         required
         />
         <span className={!errors[index] ? "line" : "line red"}></span>

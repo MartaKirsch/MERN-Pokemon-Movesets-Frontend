@@ -1,15 +1,16 @@
 import { useContext, useEffect, useState } from 'react';
 import FormContext from 'components/Add/Form/FormContext';
 import Wrapper from 'components/Add/Form/Inputs/Wrapper';
-import useCheck from 'hooks/useCheck';
+import useCheckPost from 'hooks/useCheckPost';
 
 const NameInput = () => {
 
-  const { name, setName, errors, setErrors, pokemon } = useContext(FormContext);
+  const { name, setName, errors, setErrors, pokemon, isUpdate, id } = useContext(FormContext);
 
   const [lengthValid, setLengthValid] = useState(true);
 
-  const { isOK: isValid } = useCheck(`/moveset/exists/${name}/${pokemon}`);
+  const { isOK: isValid } = useCheckPost(`/moveset/exists`,{name,pokemon,id});
+
 
   useEffect(()=>{
     let arr = [...errors];
@@ -18,7 +19,7 @@ const NameInput = () => {
       arr[6]=1;
     else
       arr[6]=0;
-    
+
     setErrors(arr);
   },[isValid, lengthValid]);
 

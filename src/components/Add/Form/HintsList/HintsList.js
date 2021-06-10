@@ -26,7 +26,7 @@ const HintsList = ({display, setter, url, input, validitySetter}) => {
       validitySetter(1);
 
 
-  },[input]);
+  },[hints,input]);
 
   return(
     <Wrapper display={display}>

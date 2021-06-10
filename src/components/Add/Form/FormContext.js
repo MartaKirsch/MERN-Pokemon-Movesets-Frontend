@@ -16,7 +16,9 @@ const FormContext = React.createContext({
   stats: "",
   setStats: ()=>{},
   moves: "",
-  setMoves: ()=>{}
+  setMoves: ()=>{},
+  isUpdate:false,
+  id:""
 });
 
 export default FormContext;

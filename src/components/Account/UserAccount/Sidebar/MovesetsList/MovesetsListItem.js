@@ -16,7 +16,7 @@ const MovesetsListItem = ({url,pokemon,name,id}) => {
 
       if(res.statusText!=="OK")
         throw new Error('error happened!');
-      
+
       if(res.data.deleted)
         history.go(0);
       else
@@ -54,7 +54,7 @@ const MovesetsListItem = ({url,pokemon,name,id}) => {
         </div>
       }
       <Buttons>
-        <button className="update">Update</button>
+        <button className="update" onClick={e=>history.push(`/moveset/update/${id}`)}>Update</button>
         <button
         className="delete"
         onClick={e=>setDeleteMessageVisible(true)}>

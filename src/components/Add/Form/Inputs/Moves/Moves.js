@@ -26,15 +26,20 @@ const Moves = () => {
   //add item
   const handleClick = e => {
     e.preventDefault();
-
+    
     let arr = [...moves];
     arr.push("");
     setMoves(arr);
 
-    let errArr = [...errors];
-    errArr.push(false);
-    setErrors(errArr);
   }
+
+  useEffect(()=>{
+    let errArr = [...errors];
+    while (errArr.length!==moves.length)
+      errArr.push(false);
+    setErrors(errArr);
+    console.log(moves);
+  },[moves]);
 
   //on pokemon change reset errors arr
   useEffect(()=>{

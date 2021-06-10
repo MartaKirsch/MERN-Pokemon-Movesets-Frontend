@@ -7,6 +7,7 @@ import Pokemon from 'views/Pokemon';
 import Moveset from 'views/Moveset';
 import Account from 'views/Account';
 import Add from 'views/Add';
+import UpdateMoveset from 'views/UpdateMoveset';
 
 
 function App() {
@@ -20,8 +21,9 @@ function App() {
             <Route exact path="/" component={Home}/>
             <Route path="/add" component={Add}/>
             <Route path="/account" component={Account}/>
+            <Route path="/moveset/update/:id" component={UpdateMoveset}/>
             <Route path="/pokemon/:name" component={Pokemon}/>
-            <Route path="/moveset/:name/:id" component={Moveset}></Route>
+            <Route path="/moveset/:name/:id" component={Moveset}/>
           </Switch>
         </Wrapper>
       </BrowserRouter>
