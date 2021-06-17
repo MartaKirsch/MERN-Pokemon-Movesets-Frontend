@@ -34,7 +34,7 @@ const Header = () => {
         </Link>
       </Button>
 
-      <Link to={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
+      <Link to={`/pokemon/${species.name}`}>{pokemon.name}</Link>
 
       <Button>
         <Link to={`/pokemon/${nextId}`} className="buttonLink">

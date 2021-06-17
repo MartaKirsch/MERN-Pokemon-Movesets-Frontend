@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   height:85%;
   display:flex;
   flex-direction:column;
+  align-items:center;
   overflow-y:auto;
   background-color:var(--grey);
   color:black;
