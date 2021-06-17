@@ -5,7 +5,7 @@ import SidebarContext from 'components/Account/UserAccount/Sidebar/SidebarContex
 import useHideHints from 'hooks/useHideHints';
 import useLoadHints from 'hooks/useLoadHints';
 
-const Searchbar = ({hintsVisible, placeholder}) => {
+const Searchbar = ({hintsVisible, placeholder, choice, setter}) => {
 
   const ref = useRef(null);
 
@@ -14,15 +14,21 @@ const Searchbar = ({hintsVisible, placeholder}) => {
 
 
   return(
-    <Wrapper>
+    <Wrapper choice={choice.toString()}>
       <span className="wrapper" ref={ref}>
-        <input
-        type="search"
-        placeholder={placeholder}
-        onFocus={e=>setIsVisible(true)}
-        onChange={e=>setPokemon(e.target.value)}
-        value={pokemon}
-        />
+        <div className="inputWrapper">
+          <input
+          type="search"
+          placeholder={placeholder}
+          onFocus={e=>setIsVisible(true)}
+          onChange={e=>setPokemon(e.target.value)}
+          value={pokemon}
+          />
+          {choice && <div className="buttons">
+            <button className="P" onClick={e=>setter(true)}>P</button>
+            <button className="M" onClick={e=>setter(false)}>M</button>
+          </div>}
+        </div>
         <span className="line"></span>
         {hintsVisible && <HintsList
         display={isVisible.toString()}
@@ -37,7 +43,9 @@ const Searchbar = ({hintsVisible, placeholder}) => {
 
 Searchbar.defaultProps = {
   hintsVisible: true,
-  placeholder: "Search for moveset"
+  placeholder: "Search for moveset",
+  choice:false,
+  setter:()=>{}
 };
 
 export default Searchbar;

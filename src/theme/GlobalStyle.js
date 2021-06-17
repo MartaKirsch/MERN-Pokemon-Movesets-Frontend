@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
     --pistachio_L:#BEFFD3;
     --yellow_L:#F6EB99;
     --grey_L:#FFFFFF;
+    --blue_L:#77ddFF;
 
     --error_red:#A01800;
   }

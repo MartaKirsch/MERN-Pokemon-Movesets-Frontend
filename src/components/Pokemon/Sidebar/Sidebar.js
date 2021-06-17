@@ -5,18 +5,27 @@ import MovesetsList from 'components/Pokemon/Sidebar/MovesetsList/MovesetsList';
 import SidebarContext from 'components/Account/UserAccount/Sidebar/SidebarContext';
 import Context from 'components/Pokemon/Context';
 
+import {default as PokeSearch} from 'components/Home/Sidebar/Searchbar/Searchbar';
+
 const Sidebar = () => {
 
   const [pokemon, setPokemon] = useState("");
 
   const { urls, selectedForm } = useContext(Context);
+  const [showPokeSearch, setShowPokeSearch] = useState(true);
 
   const values = {pokemon, setPokemon};
 
   return(
     <Wrapper>
       <SidebarContext.Provider value={values}>
-        <Searchbar hintsVisible={false}/>
+        {!showPokeSearch && <Searchbar
+          hintsVisible={false}
+          choice={true}
+          setter={setShowPokeSearch}/>}
+        {showPokeSearch && <PokeSearch
+          choice={true}
+          setter={setShowPokeSearch}/>}
         <MovesetsList url="/moveset/loadList" pokeName={urls[selectedForm.indexOf(true)]}/>
       </SidebarContext.Provider>
     </Wrapper>
