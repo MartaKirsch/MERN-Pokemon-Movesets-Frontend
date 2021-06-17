@@ -20,6 +20,13 @@ const Wrapper = styled.div`
     width:7vw;
     height:2vw;
   }
+
+  h1
+  {
+    font-size:1.3vw;
+    font-weight:normal;
+
+  }
 `;
 
 export default Wrapper;
