@@ -5,32 +5,24 @@ const Wrapper = styled.div`
   display:flex;
   align-items:center;
   justify-content:space-between;
-  margin: 0 0 2vw 0;
   position:relative;
-  width:30vw;
 
   label
   {
-    font-size:2vw;
     color:white;
-    margin:0 0 1vw 0;
   }
 
   .wrapper
   {
-    width:90%;
     position:relative;
   }
 
   input
   {
     width:100%;
-    height:3vw;
     border-radius:15px;
     border:none;
     color:black;
-    padding: 0 1vw;
-    font-size:1.1vw;
   }
 
   .line.red
@@ -62,6 +54,66 @@ const Wrapper = styled.div`
   input:focus + .line::after,input:hover + .line::after
   {
     transform:scale(1);
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    width:35vw;
+    margin: 0 0 2.5vw 0;
+
+    label
+    {
+      font-size:2.3vw;
+      color:white;
+      margin:0 0 1.25vw 0;
+    }
+
+    .wrapper
+    {
+      width:85%;
+    }
+
+    input
+    {
+      height:4vw;
+      padding: 0 1.25vw;
+      font-size:1.3vw;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    width:30vw;
+    margin: 0 0 2vw 0;
+
+    label
+    {
+      font-size:2vw;
+      color:white;
+      margin:0 0 1vw 0;
+    }
+
+    .wrapper
+    {
+      width:90%;
+    }
+
+    input
+    {
+      height:3vw;
+      padding: 0 1vw;
+      font-size:1.1vw;
+    }
   }
 `;
 

@@ -1,16 +1,12 @@
 import styled from 'styled-components';
 
 const LoadMoreButton = styled.button`
-  font-size:1.5vw;
   background-color:var(--pistachio);
-  width: ${({isForm}) => isForm ? "15%" : "70%"};
+  border-radius:15px;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding: 1vw 0;
   text-shadow: 1px 1px 2px #CE5937,1px 1px 2px #CE5937,1px 1px 2px #CE5937,1px 1px 2px #CE5937;
-  border-radius:15px;
-  margin:${({form}) => form==="true" ? "0 0 2vw" : "2vw 0"};
   z-index:1;
   position:relative;
 
@@ -76,6 +72,32 @@ const LoadMoreButton = styled.button`
     animation: showbefore 0.1s 0.15s forwards;
     -moz-animation: showbefore 0.1s 0.15s forwards;
     -webkit-animation: showbefore 0.1s 0.15s forwards;
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    font-size:1.6vw;
+    padding: 1vw 0;
+    width: ${({isForm}) => isForm ? "16%" : "70%"};
+    margin: ${({isForm}) => isForm ? "0 0 5vw" : "2vw 0"};
+  }
+
+  @media(min-width: 1600px)
+  {
+    font-size:1.5vw;
+    padding: 1vw 0;
+    width: ${({isForm}) => isForm ? "15%" : "70%"};
+    margin:${({form}) => form==="true" ? "0 0 2vw" : "2vw 0"};
   }
 `;
 

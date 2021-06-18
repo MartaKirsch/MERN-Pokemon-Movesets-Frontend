@@ -4,37 +4,21 @@ const Wrapper = styled.span`
 
   &
   {
-    width:70%;
     position:relative;
-    margin:2vw 0 0;
-  }
-
-  &:nth-child(2)
-  {
-    margin:3vw 0 0;
-  }
-
-  &:last-child
-  {
-    margin-bottom:4vw;
   }
 
   input
   {
     width:100%;
-    height:3vw;
     border-radius:15px;
     border:none;
     color:black;
-    padding: 0 1vw;
-    font-size:1.1vw;
   }
 
   .line
   {
     position:absolute;
     width:98%;
-    height:4px;
     background-color:var(--pistachio);
     bottom:-1%;
     right:1%;
@@ -60,6 +44,78 @@ const Wrapper = styled.span`
     transform:scale(1);
   }
 
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    &
+    {
+      width:65%;
+      margin:2.5vw 0 0;
+    }
+
+    &:nth-child(2)
+    {
+      margin:3vw 0 0;
+    }
+
+    &:last-child
+    {
+      margin-bottom:4vw;
+    }
+
+    input
+    {
+      height:3.6vw;
+      padding: 0 1vw;
+      font-size:1.2vw;
+    }
+
+    .line
+    {
+      height:4px;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    &
+    {
+      width:70%;
+      margin:2vw 0 0;
+    }
+
+    &:nth-child(2)
+    {
+      margin:3vw 0 0;
+    }
+
+    &:last-child
+    {
+      margin-bottom:4vw;
+    }
+
+    input
+    {
+      height:3vw;
+      padding: 0 1vw;
+      font-size:1.1vw;
+    }
+
+    .line
+    {
+      height:4px;
+    }
+  }
 `;
 
 export default Wrapper;

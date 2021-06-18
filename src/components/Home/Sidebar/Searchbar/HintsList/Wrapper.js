@@ -5,13 +5,11 @@ const Wrapper = styled.ul`
   width:98%;
   display:flex;
   flex-direction:column;
-  top:102%;
   left:1%;
   z-index:2;
   background-color:var(--pistachio);
   border-bottom-left-radius:15px;
   border-bottom-right-radius:15px;
-  max-height:50vh;
   overflow-y:auto;
   display: ${({display}) => display==="true" ? "block" : "none" };
 
@@ -37,19 +35,16 @@ const Wrapper = styled.ul`
   li
   {
     width:100%;
-    height:5vw;
   }
 
   a, button
   {
     color:black;
-    font-size:1vw;
     width:100%;
     height:100%;
     display:flex;
     align-items:center;
     justify-content:flex-start;
-    padding: 0 2vw;
     position:relative;
     overflow:hidden;
     z-index:1;
@@ -71,6 +66,50 @@ const Wrapper = styled.ul`
   a:hover::after, a:focus::after, button:hover::after, button:focus::after
   {
     transform:translateX(100%);
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    max-height:50vh;
+    top:101%;
+
+    li
+    {
+      height:5vw;
+    }
+
+    a, button
+    {
+      font-size:1.15vw;
+      padding: 0 2.1vw;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    max-height:50vh;
+    top:102%;
+
+    li
+    {
+      height:5vw;
+    }
+
+    a, button
+    {
+      font-size:1vw;
+      padding: 0 2vw;
+    }
   }
 `;
 

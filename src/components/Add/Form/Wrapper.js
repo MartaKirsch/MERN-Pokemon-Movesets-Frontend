@@ -27,6 +27,26 @@ const Wrapper = styled.form`
    background: #6c7c8b;
   }
 
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+
+  }
+
+  @media(min-width: 1600px)
+  {
+
+  }
 `;
 
 export default Wrapper;

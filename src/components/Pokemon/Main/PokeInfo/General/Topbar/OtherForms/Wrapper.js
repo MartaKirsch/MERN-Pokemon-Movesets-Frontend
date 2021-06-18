@@ -2,9 +2,6 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
 
-  width: ${({mainForms})=>mainForms ? "18%" : "40%"};
-  margin: ${({mainForms})=>mainForms ? "0" : "0 0 0 auto"};
-  height:10vw;
   display: flex;
   flex-direction:column;
   overflow-y:auto;
@@ -37,8 +34,6 @@ const Wrapper = styled.div`
   button
   {
     width:100%;
-    height:2.65vw;
-    font-size:1.2vw;
     text-transform:uppercase;
     display:flex;
     justify-content:center;
@@ -47,17 +42,8 @@ const Wrapper = styled.div`
     color:black;
     position: relative;
     z-index:1;
-    margin: 0.5vw 0;
   }
 
-  button:last-child
-  {
-    margin:0.5vw 0 0 0;
-  }
-  button:first-child
-  {
-    margin:0 0 0.5vw 0;
-  }
 
   button:disabled
   {
@@ -85,6 +71,62 @@ const Wrapper = styled.div`
 
   button.selected{
     background-color:var(--pistachio);
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    width: 40%;
+    margin:0 0 0 auto;
+    height:11vw;
+
+    button
+    {
+      height:3vw;
+      font-size:1.3vw;
+      margin: 0.6vw 0;
+    }
+
+    button:last-child
+    {
+      margin:0.5vw 0 0 0;
+    }
+    button:first-child
+    {
+      margin:0 0 0.5vw 0;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    width: 40%;
+    margin: 0 0 0 auto;
+    height:10vw;
+
+    button
+    {
+      height:2.65vw;
+      font-size:1.2vw;
+      margin: 0.5vw 0;
+    }
+
+    button:last-child
+    {
+      margin:0.5vw 0 0 0;
+    }
+    button:first-child
+    {
+      margin:0 0 0.5vw 0;
+    }
   }
 `;
 

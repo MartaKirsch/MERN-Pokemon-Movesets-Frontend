@@ -10,8 +10,46 @@ const Wrapper = styled.div`
   div
   {
     border-radius:10px;
-    padding:.5vw 1vw;
-    margin: 0 0 1vw;
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    div
+    {
+      font-size:1.1vw;
+      padding:.5vw 1vw;
+      margin-bottom:1vw;
+    }
+
+    div:last-child
+    {
+      margin:0;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    div
+    {
+      font-size:1vw;
+      padding:.5vw 1vw;
+      margin-bottom:1vw;
+    }
+
+    div:last-child
+    {
+      margin:0;
+    }
   }
 `;
 

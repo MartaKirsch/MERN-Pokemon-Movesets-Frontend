@@ -7,7 +7,26 @@ const Wrapper = styled.div`
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  margin:2vw 0 0;
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    margin:5vw 0 0;
+  }
+
+  @media(min-width: 1600px)
+  {
+    margin:2vw 0 0;
+  }
 `;
 
 export default Wrapper;

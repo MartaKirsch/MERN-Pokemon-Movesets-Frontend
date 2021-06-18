@@ -2,13 +2,6 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
 
-  width:2.5vw;
-  height:2.5vw;
-  &:nth-of-type(2)
-  {
-    margin: 0 2vw;
-  }
-
   @keyframes showbefore {
     from {
       opacity:0;
@@ -80,13 +73,55 @@ const Wrapper = styled.div`
   img
   {
     transition: transform 0.25s ease-out;
-    width:1.56vw;
-    height:1.56vw;
   }
 
   a:hover img, a:focus img
   {
     transform: scale(0.8);
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    width:3vw;
+    height:3vw;
+
+    &:nth-of-type(2)
+    {
+      margin: 0 2.5vw;
+    }
+
+    img
+    {
+      width:1.66vw;
+      height:1.66vw;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    width:2.5vw;
+    height:2.5vw;
+
+    &:nth-of-type(2)
+    {
+      margin: 0 2vw;
+    }
+
+    img
+    {
+      width:1.56vw;
+      height:1.56vw;
+    }
   }
 `;
 

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const Button = styled.button`
 
-  width:15%;
   height:90%;
 
   a.buttonLink
@@ -14,23 +13,11 @@ const Button = styled.button`
     align-items:center;
   }
 
-  &:first-child
-  {
-    margin: 0 0 0 2vw;
-  }
-
-  &:last-child
-  {
-    margin: 0 2vw 0 0;
-  }
-
   .frame
   {
     display:flex;
     justify-content:center;
     align-items:center;
-    height:3vw;
-    width:3vw;
     border-radius:15px;
     background-color:var(--grey);
     position:relative;
@@ -87,15 +74,7 @@ const Button = styled.button`
 
   svg
   {
-    width:2vw;
-    height:2vw;
     transition: transform 0.25s ease-out;
-  }
-
-  img
-  {
-    width:5vw;
-    height:5vw;
   }
 
 
@@ -107,6 +86,83 @@ const Button = styled.button`
 
     to {
       opacity:1;
+    }
+  }
+
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    width:18%;
+
+    &:first-child
+    {
+      margin: 0 0 0 2vw;
+    }
+
+    &:last-child
+    {
+      margin: 0 2vw 0 0;
+    }
+
+    .frame
+    {
+      height:3.3vw;
+      width:3.3vw;
+    }
+
+    svg
+    {
+      width:2.2vw;
+      height:2.2vw;
+    }
+
+    img
+    {
+      width:5.5vw;
+      height:5.5vw;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    width:15%;
+
+    &:first-child
+    {
+      margin: 0 0 0 2vw;
+    }
+
+    &:last-child
+    {
+      margin: 0 2vw 0 0;
+    }
+
+    .frame
+    {
+      height:3vw;
+      width:3vw;
+    }
+
+    svg
+    {
+      width:2vw;
+      height:2vw;
+    }
+
+    img
+    {
+      width:5vw;
+      height:5vw;
     }
   }
 `;

@@ -5,12 +5,36 @@ const Type = styled.div`
   text-transform: uppercase;
   display:flex;
 
-  div
+  @media(min-width: 200px)
   {
-    padding:0.4vw .6vw;
-    font-size:.8vw;
-    border-radius:10px;
-    margin:0.25vw;
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    div
+    {
+      padding:0.45vw .65vw;
+      font-size:0.9vw;
+      border-radius:10px;
+      margin:0.5vw;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    div
+    {
+      padding:0.4vw .6vw;
+      font-size:.8vw;
+      border-radius:10px;
+      margin:0.25vw;
+    }
   }
 
   div:first-child

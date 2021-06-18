@@ -8,10 +8,9 @@ const Buttons = styled.div`
 
   button
   {
-    font-size:1vw;
     display:flex;
     justify-content:center;
-    height:1.5vw;
+    align-items:center;
     width:48%;
     position:relative;
     z-index:1;
@@ -50,6 +49,34 @@ const Buttons = styled.div`
   {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    button
+    {
+      font-size:1.2vw;
+      height:2vw;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    button
+    {
+      font-size:1vw;
+      height:1.5vw;
+    }
   }
 `;
 

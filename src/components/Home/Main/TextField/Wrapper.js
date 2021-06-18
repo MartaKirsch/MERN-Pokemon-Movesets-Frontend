@@ -16,16 +16,51 @@ const Wrapper = styled.div`
     color:black;
     background-color: var(--pistachio);
     border-radius:15px;
-    font-size:1vw;
-    width:7vw;
-    height:2vw;
   }
 
   h1
   {
-    font-size:1.3vw;
     font-weight:normal;
+  }
 
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    h1
+    {
+      font-size:1.4vw;
+    }
+
+    button.logout
+    {
+      font-size:1.1vw;
+      width:7.2vw;
+      height:2.1vw;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    h1
+    {
+      font-size:1.3vw;
+    }
+
+    button.logout
+    {
+      font-size:1vw;
+      width:7vw;
+      height:2vw;
+    }
   }
 `;
 

@@ -7,8 +7,27 @@ const Wrapper = styled.div`
   display:flex;
   justify-content: ${({isMoveset})=> isMoveset ? "center" : "space-between"};
   align-items:center;
-  font-size:2vw;
   color:white;
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    font-size:2.3vw;
+  }
+
+  @media(min-width: 1600px)
+  {
+    font-size:2vw;
+  }
 `;
 
 export default Wrapper;

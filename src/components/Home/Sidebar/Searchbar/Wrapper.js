@@ -10,8 +10,6 @@ const Wrapper = styled.div`
 
   .wrapper
   {
-    width:80%;
-    height:50%;
     position:relative;
   }
 
@@ -28,16 +26,12 @@ const Wrapper = styled.div`
     display:flex;
     flex-direction:column;
     height:100%;
-    width:8%;
     justify-content:space-between;
   }
 
   .buttons button
   {
     width:100%;
-    height:48%;
-    font-size:0.7vw;
-    border-radius:10px;
     position:relative;
     z-index:1;
     overflow:hidden;
@@ -86,18 +80,14 @@ const Wrapper = styled.div`
   {
     width:100%;
     height:100%;
-    border-radius:15px;
     border:none;
     color:black;
-    padding: 0 1vw;
-    font-size:1.1vw;
   }
 
   .line
   {
     position:absolute;
     width:98%;
-    height:4px;
     background-color:var(--pistachio);
     bottom:-1%;
     right:1%;
@@ -118,6 +108,82 @@ const Wrapper = styled.div`
   input:focus + .line::after,input:hover + .line::after
   {
     transform:scale(1);
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    .wrapper
+    {
+      width:80%;
+      height:55%;
+    }
+
+    .buttons
+    {
+      width:8%;
+    }
+
+    .buttons button
+    {
+      font-size:0.9vw;
+      height:50%;
+      border-radius:9px;
+    }
+
+    input
+    {
+      border-radius:15px;
+      padding: 0 1vw;
+      font-size:1.2vw;
+    }
+
+    .line
+    {
+      height:4px;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    .wrapper
+    {
+      width:80%;
+      height:50%;
+    }
+
+    .buttons
+    {
+      width:8%;
+    }
+
+    .buttons button
+    {
+      font-size:0.7vw;
+      height:48%;
+      border-radius:10px;
+    }
+
+    input
+    {
+      border-radius:15px;
+      padding: 0 1vw;
+      font-size:1.1vw;
+    }
+
+    .line
+    {
+      height:4px;
+    }
   }
 `;
 

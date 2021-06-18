@@ -7,12 +7,40 @@ const Wrapper = styled.div`
   justify-content:center;
   align-items:center;
   display: ${({display}) => display==="true" ? "flex" : "none"};
-  margin: 2vw 0 1vw;
 
   svg
   {
-    height: ${({isInHints})=> isInHints==="false" ? `3.5vw` : `2.5vw`};
     width:auto;
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    margin: 2vw 0 1vw;
+    
+    svg
+    {
+      height: ${({isInHints})=> isInHints==="false" ? `4vw` : `3.25vw`};
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    margin: 2vw 0 1vw;
+
+    svg
+    {
+      height: ${({isInHints})=> isInHints==="false" ? `3.5vw` : `2.5vw`};
+    }
   }
 `;
 

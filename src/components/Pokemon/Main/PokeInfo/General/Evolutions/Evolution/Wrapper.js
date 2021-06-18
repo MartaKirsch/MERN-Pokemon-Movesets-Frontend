@@ -6,7 +6,6 @@ const Wrapper = styled.div`
   display: flex;
   align-items:center;
   justify-content:center;
-  margin: 1.5vw;
 
   &:last-child{
     margin-bottom:0;
@@ -21,28 +20,71 @@ const Wrapper = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    font-size:0.8vw;
-  }
-
-  svg{
-    width:3vw;
-  }
-
-  img{
-    width:5vw;
-    height:5vw;
-  }
-
-  a, .arrowBox{
-    margin:0 1vw;
   }
 
   a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
     transition: transform 0.3s ease-out;
   }
 
   a:focus{
     transform:scale(0.8);
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    margin: 2vw;
+
+    .arrowBox{
+      font-size:1vw;
+    }
+
+    svg{
+      width:4vw;
+    }
+
+    img{
+      width:6.5vw;
+      height:6.5vw;
+    }
+
+    a, .arrowBox{
+      margin:0 1vw;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    margin: 1.5vw;
+
+    .arrowBox{
+      font-size:0.8vw;
+    }
+
+    svg{
+      width:3vw;
+    }
+
+    img{
+      width:5vw;
+      height:5vw;
+    }
+
+    a, .arrowBox{
+      margin:0 1vw;
+    }
   }
 `;
 

@@ -6,24 +6,17 @@ const Wrapper = styled.div`
   flex-direction:column;
   align-items:flex-start;
   position:relative;
-  margin: 0 0 4vw 0;
 
   label
   {
-    font-size:2vw;
     color:white;
-    margin:0 0 1vw 0;
   }
 
   input, textarea
   {
-    width:30vw;
-    height:3vw;
     border-radius:15px;
     border:none;
     color:black;
-    padding: 0 1vw;
-    font-size:1.1vw;
   }
 
   .line.red
@@ -60,15 +53,73 @@ const Wrapper = styled.div`
 
   textarea
   {
-    height:10vw;
     font-family:inherit;
-    padding:1vw;
     resize: none;
   }
 
   textarea:focus
   {
     outline:none;
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    margin: 0 0 5vw 0;
+
+    label
+    {
+      font-size:2.3vw;
+      margin:0 0 1.5vw 0;
+    }
+
+    input, textarea
+    {
+      width:35vw;
+      height:4vw;
+      padding: 0 1.25vw;
+      font-size:1.3vw;
+    }
+
+    textarea
+    {
+      height:10vw;
+      padding:1vw;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    margin: 0 0 4vw 0;
+
+    label
+    {
+      font-size:2vw;
+      margin:0 0 1vw 0;
+    }
+
+    input, textarea
+    {
+      width:30vw;
+      height:3vw;
+      padding: 0 1vw;
+      font-size:1.1vw;
+    }
+
+    textarea
+    {
+      height:10vw;
+      padding:1vw;
+    }
   }
 `;
 

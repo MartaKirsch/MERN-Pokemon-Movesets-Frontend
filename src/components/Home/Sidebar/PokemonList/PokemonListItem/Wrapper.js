@@ -3,8 +3,6 @@ import styled from 'styled-components';
 const Wrapper = styled.li`
 
   width:80%;
-  height: ${({showUpdateDeleteBtns})=> showUpdateDeleteBtns ? "8.5vw" : "7vw"} ;
-  margin: 1vw 0;
   border-radius:15px;
   position:relative;
   display:flex;
@@ -14,7 +12,6 @@ const Wrapper = styled.li`
   {
     background-color:var(--grey);
     border-radius:15px;
-    padding:1vw;
     width:100%;
     height:100%;
     display:flex;
@@ -43,11 +40,7 @@ const Wrapper = styled.li`
     transform-origin: bottom left;
   }
 
-  img
-  {
-    height:5vw;
-    width:5vw;
-  }
+
 
   .line
   {
@@ -72,14 +65,11 @@ const Wrapper = styled.li`
 
   .pokename
   {
-    font-size:1.2vw;
     color:var(--medGrey);
   }
 
   .imgWrapper
   {
-    width:2vw;
-    height:2vw;
     margin: auto 0 auto auto;
   }
 
@@ -94,14 +84,6 @@ const Wrapper = styled.li`
     flex-direction:column;
     align-items:center;
     justify-content: space-between;
-    font-size:1vw;
-  }
-
-  .messageWrapper button
-  {
-    padding:0.5vw 1vw;
-    font-size:0.8vw;
-    border-radius:15px;
   }
 
   .buttonsWrapper
@@ -121,6 +103,99 @@ const Wrapper = styled.li`
   {
     color:white;
     background-color:var(--error_red);
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    height: ${({showUpdateDeleteBtns})=> showUpdateDeleteBtns ? "9.5vw" : "8vw"} ;
+    margin: 1.25vw 0;
+
+    a, .messageWrapper
+    {
+      padding:1vw;
+    }
+
+    img
+    {
+      height:5.75vw;
+      width:5.75vw;
+      margin: auto 0;
+    }
+
+    /* user account */
+    .pokename
+    {
+      font-size:1.2vw;
+    }
+
+    .imgWrapper
+    {
+      width:2vw;
+      height:2vw;
+    }
+
+    .messageWrapper
+    {
+      font-size:1.2vw;
+    }
+
+    .messageWrapper button
+    {
+      padding:0.5vw 1vw;
+      font-size:1vw;
+      border-radius:15px;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    height: ${({showUpdateDeleteBtns})=> showUpdateDeleteBtns ? "8.5vw" : "7vw"} ;
+    margin: 1vw 0;
+
+    a, .messageWrapper
+    {
+      padding:1vw;
+    }
+
+    img
+    {
+      height:5vw;
+      width:5vw;
+    }
+
+    /* user account */
+    .pokename
+    {
+      font-size:1.2vw;
+    }
+
+    .imgWrapper
+    {
+      width:2vw;
+      height:2vw;
+    }
+
+    .messageWrapper
+    {
+      font-size:1vw;
+    }
+
+    .messageWrapper button
+    {
+      padding:0.5vw 1vw;
+      font-size:0.8vw;
+      border-radius:15px;
+    }
   }
 `;
 

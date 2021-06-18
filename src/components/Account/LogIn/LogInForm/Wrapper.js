@@ -6,15 +6,42 @@ const Wrapper = styled.form`
   align-items:center;
   width:100%;
 
-  svg
+  @media(min-width: 200px)
   {
-    width:12vw;
-    height:12vw;
+
   }
 
-  button
+  @media(min-width: 992px)
   {
-    margin: 5vw 0 0;
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    svg
+    {
+      width:14vw;
+      height:14vw;
+    }
+
+    button
+    {
+      margin: 3vw 0 0;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    svg
+    {
+      width:12vw;
+      height:12vw;
+    }
+
+    button
+    {
+      margin: 5vw 0 0;
+    }
   }
 `;
 

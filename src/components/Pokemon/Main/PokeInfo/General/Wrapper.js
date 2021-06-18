@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   flex-direction:column;
   align-items:center;
   overflow-y:auto;
-  padding: 0 0 2vw;
   scrollbar-color: #7D8D9C transparent;
   scrollbar-width: thin;
 
@@ -26,6 +25,26 @@ const Wrapper = styled.div`
 
   &::-webkit-scrollbar-thumb:hover {
    background: #6c7c8b;
+  }
+
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    padding: 0 0 5vw;
+  }
+
+  @media(min-width: 1600px)
+  {
+    padding: 0 0 2vw;
   }
 `;
 

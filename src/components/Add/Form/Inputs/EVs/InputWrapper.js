@@ -5,19 +5,13 @@ const Wrapper = styled.div`
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin: 0 0 2vw 0;
   width:100%;
-
-
 
   input, select
   {
-    height:3vw;
     border-radius:15px;
     border:none;
     color:black;
-    padding: 0 1vw;
-    font-size:1.1vw;
   }
 
   select, .textWrapper
@@ -73,6 +67,39 @@ const Wrapper = styled.div`
     border:2px solid white;
   }
 
+  @media(min-width: 200px)
+  {
+
+  }
+
+  @media(min-width: 992px)
+  {
+
+  }
+
+  @media(min-width: 1200px)
+  {
+    margin: 0 0 2.5vw 0;
+
+    input, select
+    {
+      height:4vw;
+      padding: 0 1.25vw;
+      font-size:1.3vw;
+    }
+  }
+
+  @media(min-width: 1600px)
+  {
+    margin: 0 0 2vw 0;
+
+    input, select
+    {
+      height:3vw;
+      padding: 0 1vw;
+      font-size:1.1vw;
+    }
+  }
 `;
 
 export default Wrapper;
