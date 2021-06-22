@@ -87,7 +87,25 @@ const Wrapper = styled.div`
 
   @media(min-width: 992px)
   {
+    width:4vw;
+    height:4vw;
 
+    &:nth-of-type(2)
+    {
+      margin: 0 3vw;
+    }
+
+    &:last-child
+    {
+      margin: 0 0 0 3vw;
+      display: inline-block;
+    }
+
+    img
+    {
+      width:2.25vw;
+      height:2.25vw;
+    }
   }
 
   @media(min-width: 1200px)
@@ -98,6 +116,11 @@ const Wrapper = styled.div`
     &:nth-of-type(2)
     {
       margin: 0 2.5vw;
+    }
+
+    &:last-child
+    {
+      display: none;
     }
 
     img

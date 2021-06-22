@@ -117,7 +117,35 @@ const Wrapper = styled.div`
 
   @media(min-width: 992px)
   {
+    .wrapper
+    {
+      width:80%;
+      height:55%;
+    }
 
+    .buttons
+    {
+      width:8%;
+    }
+
+    .buttons button
+    {
+      font-size:0.9vw;
+      height:50%;
+      border-radius:9px;
+    }
+
+    input
+    {
+      border-radius:15px;
+      padding: 0 1vw;
+      font-size:1.2vw;
+    }
+
+    .line
+    {
+      height:4px;
+    }
   }
 
   @media(min-width: 1200px)

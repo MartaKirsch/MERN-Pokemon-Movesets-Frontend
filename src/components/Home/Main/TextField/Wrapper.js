@@ -30,7 +30,17 @@ const Wrapper = styled.div`
 
   @media(min-width: 992px)
   {
+    h1
+    {
+      font-size:1.4vw;
+    }
 
+    button.logout
+    {
+      font-size:1.1vw;
+      width:7.2vw;
+      height:2.1vw;
+    }
   }
 
   @media(min-width: 1200px)

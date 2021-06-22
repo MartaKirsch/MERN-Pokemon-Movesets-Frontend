@@ -75,7 +75,19 @@ const Wrapper = styled.ul`
 
   @media(min-width: 992px)
   {
+    max-height:50vh;
+    top:101%;
 
+    li
+    {
+      height:5vw;
+    }
+
+    a, button
+    {
+      font-size:1.15vw;
+      padding: 0 2.1vw;
+    }
   }
 
   @media(min-width: 1200px)

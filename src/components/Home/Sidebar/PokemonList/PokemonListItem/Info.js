@@ -14,7 +14,7 @@ const Info = styled.div`
 
   @media(min-width: 992px)
   {
-
+    font-size:1.4vw;
   }
 
   @media(min-width: 1200px)

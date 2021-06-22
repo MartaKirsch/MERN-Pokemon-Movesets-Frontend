@@ -14,7 +14,8 @@ const Wrapper = styled.nav`
 
   @media(min-width: 992px)
   {
-
+    height:12%;
+    padding:0 4vw;
   }
 
   @media(min-width: 1200px)

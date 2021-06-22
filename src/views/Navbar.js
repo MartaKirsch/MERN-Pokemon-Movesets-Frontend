@@ -7,6 +7,7 @@ const Navbar = () =>{
       <Button img="home" color="grey" url="/"/>
       <Button img="add" color="yellow" url="/add"/>
       <Button img="user" color="pistachio" url="/account"/>
+      <Button img="menu" color="blue" url="/account"/>
     </Wrapper>
   )
 };
