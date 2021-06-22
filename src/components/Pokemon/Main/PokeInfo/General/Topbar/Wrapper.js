@@ -16,7 +16,16 @@ const Wrapper = styled.div`
 
   @media(min-width: 992px)
   {
+    padding:5vw;
 
+    .box
+    {
+      margin:0 3vw;
+    }
+    .box:nth-child(2)
+    {
+      margin:0 0 0 3.5vw;
+    }
   }
 
   @media(min-width: 1200px)

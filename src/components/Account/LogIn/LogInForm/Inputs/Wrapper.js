@@ -52,7 +52,33 @@ const Wrapper = styled.span`
 
   @media(min-width: 992px)
   {
+    &
+    {
+      width:65%;
+      margin:3vw 0 0;
+    }
 
+    &:nth-child(2)
+    {
+      margin:3.5vw 0 0;
+    }
+
+    &:last-child
+    {
+      margin-bottom:5vw;
+    }
+
+    input
+    {
+      height:4.5vw;
+      padding: 0 1.5vw;
+      font-size:1.6vw;
+    }
+
+    .line
+    {
+      height:4px;
+    }
   }
 
   @media(min-width: 1200px)

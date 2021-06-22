@@ -20,13 +20,18 @@ const Wrapper = styled.div`
 
   @media(min-width: 992px)
   {
+    margin: 3vw 0 2vw;
 
+    svg
+    {
+      height: ${({isInHints})=> isInHints==="false" ? `6vw` : `5.25vw`};
+    }
   }
 
   @media(min-width: 1200px)
   {
     margin: 2vw 0 1vw;
-    
+
     svg
     {
       height: ${({isInHints})=> isInHints==="false" ? `4vw` : `3.25vw`};

@@ -13,7 +13,16 @@ const Wrapper = styled.form`
 
   @media(min-width: 992px)
   {
+    svg
+    {
+      width:18vw;
+      height:18vw;
+    }
 
+    button
+    {
+      margin: 3vw 0 0;
+    }
   }
 
   @media(min-width: 1200px)

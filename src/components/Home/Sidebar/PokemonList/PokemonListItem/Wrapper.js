@@ -112,25 +112,25 @@ const Wrapper = styled.li`
 
   @media(min-width: 992px)
   {
-    height: ${({showUpdateDeleteBtns})=> showUpdateDeleteBtns ? "9.5vw" : "8vw"} ;
-    margin: 1.25vw 0;
+    height: ${({showUpdateDeleteBtns})=> showUpdateDeleteBtns ? "13.5vw" : "11vw"} ;
+    margin: 2vw 0;
 
     a, .messageWrapper
     {
-      padding:1vw;
+      padding:1.5vw;
     }
 
     img
     {
-      height:5.75vw;
-      width:5.75vw;
+      height:7vw;
+      width:7vw;
       margin: auto 0;
     }
 
     /* user account */
     .pokename
     {
-      font-size:1.2vw;
+      font-size:1.6vw;
     }
 
     .imgWrapper
@@ -141,13 +141,13 @@ const Wrapper = styled.li`
 
     .messageWrapper
     {
-      font-size:1.2vw;
+      font-size:1.6vw;
     }
 
     .messageWrapper button
     {
-      padding:0.5vw 1vw;
-      font-size:1vw;
+      padding:1vw 1.5vw;
+      font-size:1.5vw;
       border-radius:15px;
     }
   }

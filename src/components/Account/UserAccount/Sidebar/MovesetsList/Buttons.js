@@ -35,7 +35,7 @@ const Buttons = styled.div`
   {
     content:'';
     position:absolute;
-    width:100%;
+    width:101%;
     height:100%;
     top: 0; right: 0; bottom: 0; left: 0;
     transform: scaleX(0);
@@ -58,7 +58,11 @@ const Buttons = styled.div`
 
   @media(min-width: 992px)
   {
-
+    button
+    {
+      font-size:1.6vw;
+      height:3vw;
+    }
   }
 
   @media(min-width: 1200px)

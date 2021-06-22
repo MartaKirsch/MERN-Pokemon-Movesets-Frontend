@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 
   @media(min-width: 992px)
   {
-
+    font-size:2.8vw;
   }
 
   @media(min-width: 1200px)

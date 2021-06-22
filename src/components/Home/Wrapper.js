@@ -13,6 +13,7 @@ const Wrapper = styled.div`
 
   @media(min-width: 992px)
   {
+    position:relative;
     height: ${({userAccount}) => userAccount==="true" ? "100%" : "88%"};
   }
 

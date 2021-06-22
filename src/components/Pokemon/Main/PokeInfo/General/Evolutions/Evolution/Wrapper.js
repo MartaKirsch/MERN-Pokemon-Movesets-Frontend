@@ -40,7 +40,24 @@ const Wrapper = styled.div`
 
   @media(min-width: 992px)
   {
+    margin: 3.5vw;
 
+    .arrowBox{
+      font-size:1.5vw;
+    }
+
+    svg{
+      width:6vw;
+    }
+
+    img{
+      width:8.5vw;
+      height:8.5vw;
+    }
+
+    a, .arrowBox{
+      margin:0 2vw;
+    }
   }
 
   @media(min-width: 1200px)

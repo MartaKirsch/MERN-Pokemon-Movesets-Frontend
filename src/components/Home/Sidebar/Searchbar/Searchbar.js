@@ -16,6 +16,7 @@ const Searchbar = ({choice,setter}) => {
     setIsVisible(true);
   };
 
+  //line was outside inputWrapper
   return(
     <Wrapper choice={choice.toString()}>
       <span className="wrapper" ref={ref}>
@@ -27,12 +28,12 @@ const Searchbar = ({choice,setter}) => {
           onChange={e=>setSearchPhrase(e.target.value)}
           value={searchPhrase}
           />
-          {choice && <div className="buttons">
-            <button className="P" onClick={e=>setter(true)}>P</button>
-            <button className="M" onClick={e=>setter(false)}>M</button>
+          {choice && <div className="buttons menu">
+            <button className="P menu" onClick={e=>setter(true)}>P</button>
+            <button className="M menu" onClick={e=>setter(false)}>M</button>
           </div>}
+          <span className="line"></span>
         </div>
-        <span className="line"></span>
         <HintsList
         display={isVisible.toString()}
         isError={isError}

@@ -80,7 +80,25 @@ const Wrapper = styled.div`
 
   @media(min-width: 992px)
   {
+    width: 40%;
+    margin:0 0 0 auto;
+    height:15vw;
 
+    button
+    {
+      height:4vw;
+      font-size:1.6vw;
+      margin: 0.6vw 0;
+    }
+
+    button:last-child
+    {
+      margin:0.5vw 0 0 0;
+    }
+    button:first-child
+    {
+      margin:0 0 0.5vw 0;
+    }
   }
 
   @media(min-width: 1200px)

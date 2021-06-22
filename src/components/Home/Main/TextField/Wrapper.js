@@ -32,14 +32,14 @@ const Wrapper = styled.div`
   {
     h1
     {
-      font-size:1.4vw;
+      font-size:1.9vw;
     }
 
     button.logout
     {
-      font-size:1.1vw;
-      width:7.2vw;
-      height:2.1vw;
+      font-size:1.5vw;
+      width:9vw;
+      height:3vw;
     }
   }
 

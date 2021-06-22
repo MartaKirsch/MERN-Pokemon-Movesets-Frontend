@@ -24,9 +24,9 @@ const Searchbar = ({hintsVisible, placeholder, choice, setter}) => {
           onChange={e=>setPokemon(e.target.value)}
           value={pokemon}
           />
-          {choice && <div className="buttons">
-            <button className="P" onClick={e=>setter(true)}>P</button>
-            <button className="M" onClick={e=>setter(false)}>M</button>
+          {choice && <div className="buttons menu">
+            <button className="P menu" onClick={e=>setter(true)}>P</button>
+            <button className="M menu" onClick={e=>setter(false)}>M</button>
           </div>}
         </div>
         <span className="line"></span>

@@ -22,7 +22,17 @@ const Wrapper = styled.div`
 
   @media(min-width: 992px)
   {
+    width:15vw;
+    height:15vw;
+    border-radius:15px;
 
+    img
+    {
+      width:12vw;
+      height:12vw;
+      border-radius:15px;
+      border: 2px dashed var(--pistachio);
+    }
   }
 
   @media(min-width: 1200px)
@@ -35,8 +45,6 @@ const Wrapper = styled.div`
     {
       width:9vw;
       height:9vw;
-      border-radius:15px;
-      border: 2px dashed var(--pistachio);
     }
   }
 

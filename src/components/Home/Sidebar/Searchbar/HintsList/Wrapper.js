@@ -80,13 +80,13 @@ const Wrapper = styled.ul`
 
     li
     {
-      height:5vw;
+      height:7vw;
     }
 
     a, button
     {
-      font-size:1.15vw;
-      padding: 0 2.1vw;
+      font-size:1.4vw;
+      padding: 0 3vw;
     }
   }
 

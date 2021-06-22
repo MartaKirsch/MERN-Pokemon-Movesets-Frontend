@@ -12,8 +12,9 @@ const Wrapper = styled.div`
     }
   }
 
-  a
+  a, button
   {
+    cursor:pointer;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -25,7 +26,7 @@ const Wrapper = styled.div`
     z-index:1;
   }
 
-  a::after
+  a::after, button::after
   {
     content:'';
     position:absolute;
@@ -40,7 +41,7 @@ const Wrapper = styled.div`
     border-radius:15px;
   }
 
-  a::before
+  a::before, button::before
   {
     content:'';
     position:absolute;
@@ -57,11 +58,11 @@ const Wrapper = styled.div`
     animation-fill-mode: forwards;
   }
 
-  a:hover::after, a:focus::after
+  a:hover::after, a:focus::after, button:hover::after, button:focus::after
   {
     transform:scale(1);
   }
-  a:hover::before, a:focus::before
+  a:hover::before, a:focus::before, button:hover::before, button:focus::before
   {
     /* animation-fill-mode: forwards; */
     /* animation:showbefore 0.1s linear 0.25s; */
@@ -75,9 +76,10 @@ const Wrapper = styled.div`
     transition: transform 0.25s ease-out;
   }
 
-  a:hover img, a:focus img
+  a:hover img, a:focus img, button:hover img, button:focus img
   {
     transform: scale(0.8);
+    transform-origin:50% 50%;
   }
 
   @media(min-width: 200px)

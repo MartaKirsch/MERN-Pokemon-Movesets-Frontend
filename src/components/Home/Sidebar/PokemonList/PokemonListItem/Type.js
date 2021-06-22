@@ -14,8 +14,8 @@ const Type = styled.div`
   {
     div
     {
-      padding:0.45vw .65vw;
-      font-size:0.9vw;
+      padding:0.75vw 1.25vw;
+      font-size:1.4vw;
       border-radius:10px;
       margin:0.5vw;
     }
