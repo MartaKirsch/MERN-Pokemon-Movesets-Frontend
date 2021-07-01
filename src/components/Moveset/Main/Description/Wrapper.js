@@ -20,20 +20,38 @@ const Wrapper = styled.div`
 
   }
 
-  @media(min-width: 992px)
+  @media(min-width: 768px)
   {
-    width:90%;
-    margin: 2.5vw 0 5vw;
+    width:75%;
+    margin: 5vw 0 7.5vw;
 
     .label
     {
-      font-size:1.35vw;
+      font-size:2vw;
+      margin: 0 0 2vw;
+    }
+
+    .content
+    {
+      font-size:1.8vw;
+      padding:4vw;
+    }
+  }
+
+  @media(min-width: 992px)
+  {
+    width:90%;
+    margin: 5vw 0 7.5vw;
+
+    .label
+    {
+      font-size:1.65vw;
       margin: 0 0 1.5vw;
     }
 
     .content
     {
-      font-size:1.15vw;
+      font-size:1.45vw;
       padding:2vw;
     }
   }

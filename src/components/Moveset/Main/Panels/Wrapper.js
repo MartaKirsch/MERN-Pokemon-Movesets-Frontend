@@ -4,15 +4,23 @@ const Wrapper = styled.div`
 
   width:100%;
   display:flex;
-  justify-content: space-around;
 
   @media(min-width: 200px)
   {
+    flex-direction:column;
+    align-items: center;
+  }
 
+  @media(min-width: 768px)
+  {
+    margin:2.5vw 0;
   }
 
   @media(min-width: 992px)
   {
+    justify-content: space-around;
+    align-items: normal;
+    flex-direction:row;
     margin:2.5vw 0;
   }
 

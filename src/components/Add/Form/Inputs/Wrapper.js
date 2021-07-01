@@ -103,7 +103,7 @@ const Wrapper = styled.div`
 
     input, textarea
     {
-      width:35vw;
+      width:40vw;
       height:5vw;
       padding: 0 2vw;
       font-size:1.7vw;

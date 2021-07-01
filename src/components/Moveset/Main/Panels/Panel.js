@@ -12,10 +12,37 @@ const Panel = styled.div`
 
   }
 
+  @media(min-width: 576px)
+  {
+    &:first-child
+    {
+      margin: 0 0 5vw 0;
+    }
+
+    width:75%;
+    padding:4vw;
+  }
+
+  @media(min-width: 768px)
+  {
+    &:first-child
+    {
+      margin: 0 0 5vw 0;
+    }
+
+    width:75%;
+    padding:4vw;
+  }
+
   @media(min-width: 992px)
   {
+    &:first-child
+    {
+      margin: 0;
+    }
+
     width:42%;
-    padding:2vw;
+    padding:2.5vw;
   }
 
   @media(min-width: 1200px)

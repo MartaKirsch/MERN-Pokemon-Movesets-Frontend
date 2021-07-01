@@ -16,28 +16,53 @@ const Row = styled.div`
 
   }
 
-  @media(min-width: 992px)
+  @media(min-width: 768px)
   {
-    margin: 1.5vw 0;
+    margin: 3vw 0;
 
     &:last-child
     {
-      margin: 1.5vw 0 0 0;
+      margin: 3vw 0 0 0;
     }
 
     &:first-child
     {
-      margin: 0 0 1.5vw 0;
+      margin: 0 0 3vw 0;
     }
 
     div:first-child
     {
-      font-size:1.35vw;
+      font-size:2vw;
     }
 
     div:last-child
     {
-      font-size:1.15vw;
+      font-size:1.8vw;
+    }
+  }
+
+  @media(min-width: 992px)
+  {
+    margin: 2vw 0;
+
+    &:last-child
+    {
+      margin: 2vw 0 0 0;
+    }
+
+    &:first-child
+    {
+      margin: 0 0 2vw 0;
+    }
+
+    div:first-child
+    {
+      font-size:1.65vw;
+    }
+
+    div:last-child
+    {
+      font-size:1.45vw;
     }
   }
 
