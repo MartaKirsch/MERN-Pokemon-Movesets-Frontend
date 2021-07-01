@@ -12,6 +12,12 @@ const Wrapper = styled.nav`
 
   }
 
+  @media(min-width: 768px)
+  {
+    height:15%;
+    padding:0 6vw;
+  }
+
   @media(min-width: 992px)
   {
     height:12%;

@@ -20,7 +20,6 @@ const Wrapper = styled.div`
     background-color:var(--grey);
     color:black;
     border-radius:15px;
-    height:100%;
     text-align:center;
     display:flex;
     align-items:center;
@@ -31,10 +30,44 @@ const Wrapper = styled.div`
   {
 
   }
+  @media(min-width: 768px)
+  {
+    margin: 0 0 8vw 0;
+    width:45vw;
+
+    label
+    {
+      font-size:3.5vw;
+      margin:0 0 2.25vw 0;
+    }
+
+    label.sumErr:after
+    {
+      font-size:2vw;
+      left:9vw;
+      width:40vw;
+      height:140%;
+    }
+  }
 
   @media(min-width: 992px)
   {
+    margin: 0 0 5vw 0;
+    width:35vw;
 
+    label
+    {
+      font-size:2.8vw;
+      margin:0 0 2vw 0;
+    }
+
+    label.sumErr:after
+    {
+      font-size:1.5vw;
+      left:9vw;
+      width:38vw;
+      height:100%;
+    }
   }
 
   @media(min-width: 1200px)

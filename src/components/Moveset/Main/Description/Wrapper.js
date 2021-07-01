@@ -22,7 +22,20 @@ const Wrapper = styled.div`
 
   @media(min-width: 992px)
   {
+    width:90%;
+    margin: 2.5vw 0 5vw;
 
+    .label
+    {
+      font-size:1.35vw;
+      margin: 0 0 1.5vw;
+    }
+
+    .content
+    {
+      font-size:1.15vw;
+      padding:2vw;
+    }
   }
 
   @media(min-width: 1200px)

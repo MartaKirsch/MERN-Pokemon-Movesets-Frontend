@@ -12,6 +12,13 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 768px)
+  {
+    padding:4vw;
+    margin:3vw 0 6vw;
+    width:90%;
+  }
+
   @media(min-width: 992px)
   {
     padding:3.5vw;

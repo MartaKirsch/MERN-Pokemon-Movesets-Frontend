@@ -78,6 +78,29 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 768px)
+  {
+    width: 45%;
+    margin:0 0 0 auto;
+    height:21vw;
+
+    button
+    {
+      height:5vw;
+      font-size:2.2vw;
+      margin: 1vw 0;
+    }
+
+    button:last-child
+    {
+      margin:0.5vw 0 0 0;
+    }
+    button:first-child
+    {
+      margin:0 0 0.5vw 0;
+    }
+  }
+
   @media(min-width: 992px)
   {
     width: 40%;

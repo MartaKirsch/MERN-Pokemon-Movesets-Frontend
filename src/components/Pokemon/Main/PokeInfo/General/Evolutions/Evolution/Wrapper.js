@@ -38,6 +38,28 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 768px)
+  {
+    margin: 4vw;
+
+    .arrowBox{
+      font-size:1.8vw;
+    }
+
+    svg{
+      width:8vw;
+    }
+
+    img{
+      width:12vw;
+      height:12vw;
+    }
+
+    a, .arrowBox{
+      margin:0 2vw;
+    }
+  }
+
   @media(min-width: 992px)
   {
     margin: 3.5vw;

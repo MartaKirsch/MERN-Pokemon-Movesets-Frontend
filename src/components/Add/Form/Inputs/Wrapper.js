@@ -66,10 +66,54 @@ const Wrapper = styled.div`
   {
 
   }
+  @media(min-width: 768px)
+  {
+    margin: 0 0 8vw 0;
+
+    label
+    {
+      font-size:3.5vw;
+      margin:0 0 2.25vw 0;
+    }
+
+    input, textarea
+    {
+      width:45vw;
+      height:6.5vw;
+      padding: 0 2vw;
+      font-size:2.2vw;
+    }
+
+    textarea
+    {
+      height:20vw;
+      padding:2vw;
+    }
+  }
 
   @media(min-width: 992px)
   {
+    margin: 0 0 6vw 0;
 
+    label
+    {
+      font-size:2.8vw;
+      margin:0 0 2vw 0;
+    }
+
+    input, textarea
+    {
+      width:35vw;
+      height:5vw;
+      padding: 0 2vw;
+      font-size:1.7vw;
+    }
+
+    textarea
+    {
+      height:20vw;
+      padding:2vw;
+    }
   }
 
   @media(min-width: 1200px)

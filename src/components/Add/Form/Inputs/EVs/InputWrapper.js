@@ -71,10 +71,28 @@ const Wrapper = styled.div`
   {
 
   }
+  @media(min-width: 768px)
+  {
+    margin: 0 0 2.5vw 0;
+
+    input, select
+    {
+      height:6.5vw;
+      padding: 0 2vw;
+      font-size:2.2vw;
+    }
+  }
 
   @media(min-width: 992px)
   {
+    margin: 0 0 2.5vw 0;
 
+    input, select
+    {
+      height:5vw;
+      padding: 0 2vw;
+      font-size:1.7vw;
+    }
   }
 
   @media(min-width: 1200px)

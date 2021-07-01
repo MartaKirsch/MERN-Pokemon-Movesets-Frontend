@@ -10,6 +10,17 @@ const Type = styled.div`
 
   }
 
+  @media(min-width: 768px)
+  {
+    div
+    {
+      padding:1vw 1.5vw;
+      font-size:1.7vw;
+      border-radius:10px;
+      margin:0 1vw;
+    }
+  }
+
   @media(min-width: 992px)
   {
     div

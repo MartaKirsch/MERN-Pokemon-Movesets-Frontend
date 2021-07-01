@@ -2,29 +2,30 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   height:100%;
+  width:100%;
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
   align-items:center;
+  overflow-y:auto;
 
-  @media(min-width: 200px)
-  {
+  scrollbar-color: #7D8D9C transparent;
+  scrollbar-width: thin;
 
+  &::-webkit-scrollbar {
+   width: 0.5vw;
   }
 
-  @media(min-width: 992px)
-  {
-    width:50%;
+  /* &::-webkit-scrollbar-track {
+   background: #adeec2;
+  } */
+
+  &::-webkit-scrollbar-thumb {
+   background: #7D8D9C;
   }
 
-  @media(min-width: 1200px)
-  {
-    width:40%;
-  }
-
-  @media(min-width: 1600px)
-  {
-    width:30%;
+  &::-webkit-scrollbar-thumb:hover {
+   background: #6c7c8b;
   }
 `;
 

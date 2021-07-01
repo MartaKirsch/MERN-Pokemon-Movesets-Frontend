@@ -87,6 +87,29 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 768px)
+  {
+    width:5vw;
+    height:5vw;
+
+    &:nth-of-type(2)
+    {
+      margin: 0 4vw;
+    }
+
+    &:last-child
+    {
+      margin: 0 0 0 4vw;
+      display: inline-block;
+    }
+
+    img
+    {
+      width:2.75vw;
+      height:2.75vw;
+    }
+  }
+
   @media(min-width: 992px)
   {
     width:4vw;

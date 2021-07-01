@@ -13,13 +13,18 @@ const Wrapper = styled.div`
 
   }
 
-  @media(min-width: 992px)
+  @media(min-width: 768px)
   {
-    width:45%;
+    width:50%;
     position:absolute;
     z-index:10;
     left:0;
     display: ${({showSidebar})=> showSidebar ? "block" : "none"} ;
+  }
+
+  @media(min-width: 992px)
+  {
+    width:45%;
   }
 
   @media(min-width: 1200px)

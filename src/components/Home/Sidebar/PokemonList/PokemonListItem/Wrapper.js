@@ -110,6 +110,48 @@ const Wrapper = styled.li`
 
   }
 
+  @media(min-width: 768px)
+  {
+    height: ${({showUpdateDeleteBtns})=> showUpdateDeleteBtns ? "17.5vw" : "15vw"} ;
+    margin: 3vw 0;
+
+    a, .messageWrapper
+    {
+      padding:2vw 1.5vw;
+    }
+
+    img
+    {
+      height:11vw;
+      width:11vw;
+      margin: auto 0;
+    }
+
+    /* user account */
+    .pokename
+    {
+      font-size:2vw;
+    }
+
+    .imgWrapper
+    {
+      width:2vw;
+      height:2vw;
+    }
+
+    .messageWrapper
+    {
+      font-size:1.8vw;
+    }
+
+    .messageWrapper button
+    {
+      padding:1.5vw 2vw;
+      font-size:1.6vw;
+      border-radius:15px;
+    }
+  }
+
   @media(min-width: 992px)
   {
     height: ${({showUpdateDeleteBtns})=> showUpdateDeleteBtns ? "13.5vw" : "11vw"} ;

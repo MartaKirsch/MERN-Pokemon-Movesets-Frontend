@@ -14,7 +14,8 @@ const Panel = styled.div`
 
   @media(min-width: 992px)
   {
-
+    width:42%;
+    padding:2vw;
   }
 
   @media(min-width: 1200px)

@@ -115,6 +115,42 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 768px)
+  {
+
+    .wrapper
+    {
+      width:80%;
+      height:75%;
+    }
+
+    .buttons
+    {
+      width:15%;
+    }
+
+    .buttons button
+    {
+      position:relative;
+      z-index:3;
+      font-size:1.5vw;
+      height:50%;
+      border-radius:9px;
+    }
+
+    input
+    {
+      border-radius:15px;
+      padding: 0 2vw;
+      font-size:2vw;
+    }
+
+    .line
+    {
+      height:4px;
+    }
+  }
+
   @media(min-width: 992px)
   {
 

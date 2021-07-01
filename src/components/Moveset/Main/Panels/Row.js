@@ -18,7 +18,27 @@ const Row = styled.div`
 
   @media(min-width: 992px)
   {
+    margin: 1.5vw 0;
 
+    &:last-child
+    {
+      margin: 1.5vw 0 0 0;
+    }
+
+    &:first-child
+    {
+      margin: 0 0 1.5vw 0;
+    }
+
+    div:first-child
+    {
+      font-size:1.35vw;
+    }
+
+    div:last-child
+    {
+      font-size:1.15vw;
+    }
   }
 
   @media(min-width: 1200px)

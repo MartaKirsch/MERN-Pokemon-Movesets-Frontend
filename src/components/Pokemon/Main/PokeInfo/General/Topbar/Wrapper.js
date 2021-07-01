@@ -14,6 +14,20 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 768px)
+  {
+    padding:5vw;
+
+    .box
+    {
+      margin:0 4vw;
+    }
+    .box:nth-child(2)
+    {
+      margin:0 0 0 3.5vw;
+    }
+  }
+
   @media(min-width: 992px)
   {
     padding:5vw;

@@ -44,6 +44,24 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 768px)
+  {
+    font-size:2vw;
+    padding:2.5vw 0;
+
+    &:first-child{
+      padding: 0 0 2.5vw 0;
+    }
+
+    &:last-child{
+      padding: 2.5vw 0 0 0;
+    }
+
+    .bar{
+      height:70%;
+    }
+  }
+
   @media(min-width: 992px)
   {
     font-size:1.6vw;

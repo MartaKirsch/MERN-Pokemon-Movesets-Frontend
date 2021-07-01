@@ -19,10 +19,20 @@ const Button = styled.button`
   {
 
   }
+  @media(min-width: 768px)
+  {
+    height:5vw;
+    width:5vw;
+    font-size:3vw;
+    border-radius:17px;
+  }
 
   @media(min-width: 992px)
   {
-
+    height:4vw;
+    width:4vw;
+    font-size:2vw;
+    border-radius:17px;
   }
 
   @media(min-width: 1200px)

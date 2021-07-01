@@ -56,6 +56,15 @@ const Buttons = styled.div`
 
   }
 
+  @media(min-width: 768px)
+  {
+    button
+    {
+      font-size:2vw;
+      height:3.5vw;
+    }
+  }
+
   @media(min-width: 992px)
   {
     button

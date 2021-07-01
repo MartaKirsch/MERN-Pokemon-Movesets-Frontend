@@ -28,6 +28,21 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 768px)
+  {
+    h1
+    {
+      font-size:2.1vw;
+    }
+
+    button.logout
+    {
+      font-size:1.8vw;
+      width:12vw;
+      height:4vw;
+    }
+  }
+
   @media(min-width: 992px)
   {
     h1

@@ -95,6 +95,39 @@ const Button = styled.button`
 
   }
 
+  @media(min-width: 768px)
+  {
+    width:18%;
+
+    &:first-child
+    {
+      margin: 0 0 0 3vw;
+    }
+
+    &:last-child
+    {
+      margin: 0 3vw 0 0;
+    }
+
+    .frame
+    {
+      height:5vw;
+      width:5vw;
+    }
+
+    svg
+    {
+      width:2.9vw;
+      height:2.9vw;
+    }
+
+    img
+    {
+      width:10vw;
+      height:10vw;
+    }
+  }
+
   @media(min-width: 992px)
   {
     width:18%;

@@ -20,6 +20,21 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 768px)
+  {
+    width:21vw;
+    height:21vw;
+    border-radius:15px;
+
+    img
+    {
+      width:17vw;
+      height:17vw;
+      border-radius:15px;
+      border: 2px dashed var(--pistachio);
+    }
+  }
+
   @media(min-width: 992px)
   {
     width:15vw;

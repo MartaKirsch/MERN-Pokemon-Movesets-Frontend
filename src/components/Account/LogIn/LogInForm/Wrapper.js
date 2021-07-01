@@ -4,15 +4,30 @@ const Wrapper = styled.form`
   display:flex;
   flex-direction:column;
   align-items:center;
-  width:100%;
 
   @media(min-width: 200px)
   {
 
   }
 
+  @media(min-width: 768px)
+  {
+    width:60%;
+    svg
+    {
+      width:22vw;
+      height:22vw;
+    }
+
+    button
+    {
+      margin: 3vw 0 0;
+    }
+  }
+
   @media(min-width: 992px)
   {
+    width:50%;
     svg
     {
       width:18vw;
@@ -27,6 +42,7 @@ const Wrapper = styled.form`
 
   @media(min-width: 1200px)
   {
+    width:50%;
     svg
     {
       width:14vw;
@@ -35,12 +51,13 @@ const Wrapper = styled.form`
 
     button
     {
-      margin: 3vw 0 0;
+      margin: 2vw 0 0;
     }
   }
 
   @media(min-width: 1600px)
   {
+    width:40%;
     svg
     {
       width:12vw;

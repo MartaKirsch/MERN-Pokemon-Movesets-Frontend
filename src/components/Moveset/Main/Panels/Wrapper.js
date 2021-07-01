@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 
   @media(min-width: 992px)
   {
-
+    margin:2.5vw 0;
   }
 
   @media(min-width: 1200px)
