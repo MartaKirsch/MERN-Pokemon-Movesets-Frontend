@@ -73,6 +73,23 @@ const Wrapper = styled.ul`
 
   }
 
+  @media(min-width: 576px)
+  {
+    max-height:50vh;
+    top:101%;
+
+    li
+    {
+      height:12vw;
+    }
+
+    a, button
+    {
+      font-size:2vw;
+      padding: 0 5vw;
+    }
+  }
+
   @media(min-width: 768px)
   {
     max-height:50vh;

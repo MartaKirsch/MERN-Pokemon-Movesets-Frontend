@@ -32,6 +32,11 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 576px)
+  {
+    padding: 0 0 12vw;
+  }
+
   @media(min-width: 768px)
   {
     padding: 0 0 8vw;

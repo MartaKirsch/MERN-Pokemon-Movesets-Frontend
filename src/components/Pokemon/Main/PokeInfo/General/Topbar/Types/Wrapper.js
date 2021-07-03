@@ -17,6 +17,21 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 576px)
+  {
+    div
+    {
+      font-size:1.9vw;
+      padding:1.25vw 1.75vw;
+      margin-bottom:2vw;
+    }
+
+    div:last-child
+    {
+      margin:0;
+    }
+  }
+
   @media(min-width: 768px)
   {
     div

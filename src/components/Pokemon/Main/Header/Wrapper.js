@@ -14,6 +14,11 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 576px)
+  {
+    font-size:3.5vw;
+  }
+
   @media(min-width: 768px)
   {
     font-size:3.5vw;

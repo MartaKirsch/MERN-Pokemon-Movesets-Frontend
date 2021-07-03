@@ -20,6 +20,7 @@ const Wrapper = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    text-align:center;
   }
 
   a{
@@ -36,6 +37,28 @@ const Wrapper = styled.div`
   @media(min-width: 200px)
   {
 
+  }
+
+  @media(min-width: 576px)
+  {
+    margin: 5vw;
+
+    .arrowBox{
+      font-size:2vw;
+    }
+
+    svg{
+      width:10vw;
+    }
+
+    img{
+      width:13vw;
+      height:13vw;
+    }
+
+    a, .arrowBox{
+      margin:0 3vw;
+    }
   }
 
   @media(min-width: 768px)

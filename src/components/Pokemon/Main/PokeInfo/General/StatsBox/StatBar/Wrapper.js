@@ -20,16 +20,10 @@ const Wrapper = styled.div`
   }
 
   .stat{
-    width:10%;
     justify-content:flex-end;
   }
 
-  .value,.min,.max{
-    width:12%;
-  }
-
   .bar-wrapper{
-    width:54%;
     justify-content:flex-start;
   }
 
@@ -41,11 +35,51 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    .stat{
+      width:12%;
+    }
 
+    .value,.min,.max{
+      width:12%;
+    }
+
+    .bar-wrapper{
+      width:52%;
+    }
+  }
+
+  @media(min-width: 576px)
+  {
+    font-size:2.2vw;
+    padding:3vw 0;
+
+    &:first-child{
+      padding: 0 0 3vw 0;
+    }
+
+    &:last-child{
+      padding: 3vw 0 0 0;
+    }
+
+    .bar{
+      height:70%;
+    }
   }
 
   @media(min-width: 768px)
   {
+    .stat{
+      width:10%;
+    }
+
+    .value,.min,.max{
+      width:12%;
+    }
+
+    .bar-wrapper{
+      width:54%;
+    }
+
     font-size:2vw;
     padding:2.5vw 0;
 

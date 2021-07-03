@@ -11,24 +11,14 @@ const Wrapper = styled.div`
 
   }
 
-  @media(min-width: 768px)
+  @media(min-width: 576px)
   {
     width:100%;
-  }
-
-  @media(min-width: 992px)
-  {
-    
   }
 
   @media(min-width: 1200px)
   {
     width:70%;
-  }
-
-  @media(min-width: 1600px)
-  {
-
   }
 `;
 

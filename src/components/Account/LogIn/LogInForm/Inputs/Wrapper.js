@@ -50,6 +50,37 @@ const Wrapper = styled.span`
 
   }
 
+  @media(min-width: 576px)
+  {
+    &
+    {
+      width:80%;
+      margin:4.5vw 0 0;
+    }
+
+    &:nth-child(2)
+    {
+      margin:4vw 0 0;
+    }
+
+    &:last-child
+    {
+      margin-bottom:6vw;
+    }
+
+    input
+    {
+      height:6.5vw;
+      padding: 0 2.5vw;
+      font-size:2.25vw;
+    }
+
+    .line
+    {
+      height:4px;
+    }
+  }
+
   @media(min-width: 768px)
   {
     &

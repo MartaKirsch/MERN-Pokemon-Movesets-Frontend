@@ -11,6 +11,11 @@ const Wrapper = styled.div`
     align-items: center;
   }
 
+  @media(min-width: 576px)
+  {
+    margin:2.5vw 0;
+  }
+
   @media(min-width: 768px)
   {
     margin:2.5vw 0;

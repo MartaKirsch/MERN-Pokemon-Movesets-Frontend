@@ -18,7 +18,6 @@ const Wrapper = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
-    border-radius:15px;
     width:100%;
     height:100%;
     background-color: var(--${props=>props.color});
@@ -38,7 +37,6 @@ const Wrapper = styled.div`
     z-index:-1;
     transform:scale(0);
     transition: transform 0.25s ease-out;
-    border-radius:15px;
   }
 
   a::before, button::before
@@ -50,7 +48,6 @@ const Wrapper = styled.div`
     width:100%;
     height:100%;
     z-index:-1;
-    border-radius:15px;
     opacity:0;
     box-shadow: 6px 5px 7px 0px rgba(45,45,45,0.75);
     -webkit-box-shadow: 6px 5px 7px 0px rgba(45,45,45,0.75);
@@ -87,6 +84,34 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 576px)
+  {
+    width:5vw;
+    height:5vw;
+
+    &:nth-of-type(2)
+    {
+      margin: 0 4vw;
+    }
+
+    &:last-child
+    {
+      margin: 0 0 0 4vw;
+      display: inline-block;
+    }
+
+    img
+    {
+      width:3vw;
+      height:3vw;
+    }
+
+    a, button, a::after, a::before, button::after, button::before
+    {
+      border-radius:10px;
+    }
+  }
+
   @media(min-width: 768px)
   {
     width:5vw;
@@ -107,6 +132,11 @@ const Wrapper = styled.div`
     {
       width:2.75vw;
       height:2.75vw;
+    }
+
+    a, button, a::after, a::before, button::after, button::before
+    {
+      border-radius:15px;
     }
   }
 

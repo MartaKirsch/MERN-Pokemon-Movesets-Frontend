@@ -12,6 +12,11 @@ const Info = styled.div`
 
   }
 
+  @media(min-width: 576px)
+  {
+    font-size:2.4vw;
+  }
+
   @media(min-width: 768px)
   {
     font-size:2.2vw;

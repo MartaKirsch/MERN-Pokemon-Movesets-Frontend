@@ -60,6 +60,32 @@ const Wrapper = styled.div`
   {
 
   }
+
+  @media(min-width: 576px)
+  {
+    width:60vw;
+    margin: 0 0 4.5vw 0;
+
+    label
+    {
+      font-size:3.5vw;
+      color:white;
+      margin:0 0 2.95vw 0;
+    }
+
+    .wrapper
+    {
+      width:85%;
+    }
+
+    input
+    {
+      height:6.5vw;
+      padding: 0 2vw;
+      font-size:2.2vw;
+    }
+  }
+
   @media(min-width: 768px)
   {
     width:45vw;

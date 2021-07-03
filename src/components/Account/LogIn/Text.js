@@ -15,6 +15,13 @@ const Wrapper = styled.button`
 
   }
 
+  @media(min-width: 576px)
+  {
+    width:50%;
+    font-size:2.25vw;
+    margin: 0 0 5vw;
+  }
+
   @media(min-width: 768px)
   {
     width:50%;

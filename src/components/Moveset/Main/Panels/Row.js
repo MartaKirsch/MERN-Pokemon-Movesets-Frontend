@@ -16,6 +16,31 @@ const Row = styled.div`
 
   }
 
+  @media(min-width: 576px)
+  {
+    margin: 4vw 0;
+
+    &:last-child
+    {
+      margin: 4vw 0 0 0;
+    }
+
+    &:first-child
+    {
+      margin: 0 0 4vw 0;
+    }
+
+    div:first-child
+    {
+      font-size:2.4vw;
+    }
+
+    div:last-child
+    {
+      font-size:2.2vw;
+    }
+  }
+
   @media(min-width: 768px)
   {
     margin: 3vw 0;

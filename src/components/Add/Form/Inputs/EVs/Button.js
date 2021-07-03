@@ -19,6 +19,15 @@ const Button = styled.button`
   {
 
   }
+
+  @media(min-width: 576px)
+  {
+    height:5vw;
+    width:5vw;
+    font-size:3.3vw;
+    border-radius:17px;
+  }
+
   @media(min-width: 768px)
   {
     height:5vw;

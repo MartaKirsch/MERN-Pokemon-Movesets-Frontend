@@ -71,6 +71,19 @@ const Wrapper = styled.div`
   {
 
   }
+
+  @media(min-width: 576px)
+  {
+    margin: 0 0 4.5vw 0;
+
+    input, select
+    {
+      height:7.5vw;
+      padding: 0 2vw;
+      font-size:2.4vw;
+    }
+  }
+
   @media(min-width: 768px)
   {
     margin: 0 0 2.5vw 0;

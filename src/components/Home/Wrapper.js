@@ -11,18 +11,19 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 576px)
+  {
+    position:relative;
+    height: ${({userAccount}) => userAccount==="true" ? "100%" : "85%"};
+  }
+
   @media(min-width: 768px)
   {
     position:relative;
     height: ${({userAccount}) => userAccount==="true" ? "100%" : "85%"};
   }
 
-  @media(min-width: 992px)
-  {
-    height: ${({userAccount}) => userAccount==="true" ? "100%" : "88%"};
-  }
-
-  @media(min-width: 1200px)
+  @media(min-width: 992px) /*for 1200px the same*/
   {
     height: ${({userAccount}) => userAccount==="true" ? "100%" : "88%"};
   }

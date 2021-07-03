@@ -30,6 +30,27 @@ const Wrapper = styled.div`
   {
 
   }
+
+  @media(min-width: 576px)
+  {
+    margin: 0 0 8vw 0;
+    width:60vw;
+
+    label
+    {
+      font-size:3.5vw;
+      margin:0 0 2.95vw 0;
+    }
+
+    label.sumErr:after
+    {
+      font-size:2vw;
+      left:9vw;
+      width:42vw;
+      height:160%;
+    }
+  }
+
   @media(min-width: 768px)
   {
     margin: 0 0 8vw 0;

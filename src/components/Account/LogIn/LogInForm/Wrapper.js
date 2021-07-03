@@ -10,6 +10,21 @@ const Wrapper = styled.form`
 
   }
 
+  @media(min-width: 576px)
+  {
+    width:60%;
+    svg
+    {
+      width:22vw;
+      height:22vw;
+    }
+
+    button
+    {
+      margin: 3vw 0 0;
+    }
+  }
+
   @media(min-width: 768px)
   {
     width:60%;

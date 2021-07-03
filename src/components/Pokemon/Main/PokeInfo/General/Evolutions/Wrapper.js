@@ -13,6 +13,11 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 576px)
+  {
+    margin:6vw 0 0;
+  }
+
   @media(min-width: 768px)
   {
     margin:6vw 0 0;

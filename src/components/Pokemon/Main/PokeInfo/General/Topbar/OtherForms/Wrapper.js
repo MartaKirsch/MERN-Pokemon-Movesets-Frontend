@@ -78,6 +78,29 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 576px)
+  {
+    width: 45%;
+    margin:0 0 0 auto;
+    height:21vw;
+
+    button
+    {
+      height:5.5vw;
+      font-size:2.4vw;
+      margin: 1.5vw 0;
+    }
+
+    button:last-child
+    {
+      margin:1.5vw 0 0 0;
+    }
+    button:first-child
+    {
+      margin:0 0 1.5vw 0;
+    }
+  }
+
   @media(min-width: 768px)
   {
     width: 45%;
@@ -93,11 +116,11 @@ const Wrapper = styled.div`
 
     button:last-child
     {
-      margin:0.5vw 0 0 0;
+      margin:1vw 0 0 0;
     }
     button:first-child
     {
-      margin:0 0 0.5vw 0;
+      margin:0 0 1vw 0;
     }
   }
 
@@ -116,11 +139,11 @@ const Wrapper = styled.div`
 
     button:last-child
     {
-      margin:0.5vw 0 0 0;
+      margin:0.6vw 0 0 0;
     }
     button:first-child
     {
-      margin:0 0 0.5vw 0;
+      margin:0 0 0.6vw 0;
     }
   }
 
@@ -139,11 +162,11 @@ const Wrapper = styled.div`
 
     button:last-child
     {
-      margin:0.5vw 0 0 0;
+      margin:0.6vw 0 0 0;
     }
     button:first-child
     {
-      margin:0 0 0.5vw 0;
+      margin:0 0 0.6vw 0;
     }
   }
 

@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   display:flex;
   justify-content:center;
   align-items:center;
+  background-color:var(--red);
 
   .wrapper
   {
@@ -115,8 +116,46 @@ const Wrapper = styled.div`
 
   }
 
+  @media(min-width: 576px)
+  {
+    margin: 0 0 3vw;
+
+    .wrapper
+    {
+      width:80%;
+      height:100%;
+    }
+
+    .buttons
+    {
+      width:15%;
+    }
+
+    .buttons button
+    {
+      position:relative;
+      z-index:3;
+      font-size:1.75vw;
+      height:50%;
+      border-radius:9px;
+    }
+
+    input
+    {
+      border-radius:15px;
+      padding: 0 2.25vw;
+      font-size:2.25vw;
+    }
+
+    .line
+    {
+      height:4px;
+    }
+  }
+
   @media(min-width: 768px)
   {
+    margin: 0;
 
     .wrapper
     {
