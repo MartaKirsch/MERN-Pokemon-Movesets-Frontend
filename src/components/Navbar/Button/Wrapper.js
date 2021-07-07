@@ -81,7 +81,30 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    width:9vw;
+    height:9vw;
 
+    &:nth-of-type(2)
+    {
+      margin: 0 8vw;
+    }
+
+    &:last-child
+    {
+      margin: 0 0 0 8vw;
+      display: inline-block;
+    }
+
+    img
+    {
+      width:5vw;
+      height:5vw;
+    }
+
+    a, button, a::after, a::before, button::after, button::before
+    {
+      border-radius:10px;
+    }
   }
 
   @media(min-width: 576px)
@@ -97,18 +120,12 @@ const Wrapper = styled.div`
     &:last-child
     {
       margin: 0 0 0 4vw;
-      display: inline-block;
     }
 
     img
     {
       width:3vw;
       height:3vw;
-    }
-
-    a, button, a::after, a::before, button::after, button::before
-    {
-      border-radius:10px;
     }
   }
 
@@ -125,7 +142,6 @@ const Wrapper = styled.div`
     &:last-child
     {
       margin: 0 0 0 4vw;
-      display: inline-block;
     }
 
     img

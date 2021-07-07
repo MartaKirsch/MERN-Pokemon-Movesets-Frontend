@@ -36,6 +36,36 @@ const Wrapper = styled.div`
   @media(min-width: 200px)
   {
     .stat{
+      width:20%;
+    }
+
+    .value,.min,.max{
+      width:14%;
+    }
+
+    .bar-wrapper{
+      width:38%;
+    }
+
+    font-size:3.8vw;
+    padding:5vw 0;
+
+    &:first-child{
+      padding: 0 0 5vw 0;
+    }
+
+    &:last-child{
+      padding: 5vw 0 0 0;
+    }
+
+    .bar{
+      height:70%;
+    }
+  }
+
+  @media(min-width: 576px)
+  {
+    .stat{
       width:12%;
     }
 
@@ -46,10 +76,7 @@ const Wrapper = styled.div`
     .bar-wrapper{
       width:52%;
     }
-  }
 
-  @media(min-width: 576px)
-  {
     font-size:2.2vw;
     padding:3vw 0;
 

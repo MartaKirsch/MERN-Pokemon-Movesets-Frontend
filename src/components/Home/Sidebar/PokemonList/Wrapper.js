@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
 
   width:100%;
-  height:85%;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -39,6 +38,16 @@ const Wrapper = styled.div`
   h2
   {
     color:white;
+  }
+
+  @media(min-width: 200px)
+  {
+    height:90%;
+  }
+
+  @media(min-width: 576px)
+  {
+    height:85%;
   }
 `;
 

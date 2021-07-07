@@ -9,7 +9,13 @@ const Panel = styled.div`
 
   @media(min-width: 200px)
   {
+    &:first-child
+    {
+      margin: 0 0 10vw 0;
+    }
 
+    width:88%;
+    padding:6vw;
   }
 
   @media(min-width: 576px)

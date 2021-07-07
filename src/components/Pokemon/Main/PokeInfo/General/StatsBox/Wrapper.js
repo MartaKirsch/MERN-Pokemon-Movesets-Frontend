@@ -9,7 +9,9 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
-
+    padding:5vw;
+    margin:4vw 0 8vw;
+    width:88%;
   }
 
   @media(min-width: 576px)

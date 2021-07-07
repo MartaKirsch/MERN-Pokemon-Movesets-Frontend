@@ -15,7 +15,12 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    margin: 6vw 0 5vw;
 
+    svg
+    {
+      height: ${({isInHints})=> isInHints==="false" ? `16vw` : `12.75vw`};
+    }
   }
 
   @media(min-width: 576px)

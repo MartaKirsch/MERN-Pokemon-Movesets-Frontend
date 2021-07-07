@@ -11,12 +11,23 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    padding: 8vw 6vw;
+    flex-direction:column;
 
+    .box
+    {
+      margin:0 0 6vw;
+    }
+    .box:nth-child(2)
+    {
+      margin:6vw 0;
+    }
   }
 
   @media(min-width: 576px)
   {
     padding:6vw;
+    flex-direction:row;
 
     .box
     {

@@ -12,7 +12,9 @@ const Wrapper = styled.button`
 
   @media(min-width: 200px)
   {
-
+    width:60%;
+    font-size:4vw;
+    margin: 0 0 5vw;
   }
 
   @media(min-width: 576px)

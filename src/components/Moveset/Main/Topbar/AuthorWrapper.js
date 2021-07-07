@@ -14,7 +14,14 @@ const AuthorWrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    font-size: 4.2vw;
+    margin:0;
 
+    .author
+    {
+      font-size: 3.8vw;
+      margin: 3vw 0 0 ;
+    }
   }
 
   @media(min-width: 576px)

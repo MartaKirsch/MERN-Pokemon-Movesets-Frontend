@@ -76,7 +76,10 @@ const LoadMoreButton = styled.button`
 
   @media(min-width: 200px)
   {
-
+    font-size:4.75vw;
+    padding: 3.5vw 0;
+    width: ${({isForm}) => isForm ? "70%" : "60%"};
+    margin: ${({isForm}) => isForm ? "6vw 0 12vw" : "6vw 0 12vw"};
   }
 
   @media(min-width: 576px)

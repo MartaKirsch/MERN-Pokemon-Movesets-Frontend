@@ -75,7 +75,24 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    width: 75%;
+    max-height:35vw;
 
+    button
+    {
+      height:8.5vw;
+      font-size:3.5vw;
+      margin: 2vw 0;
+    }
+
+    button:last-child
+    {
+      margin:1.5vw 0 0 0;
+    }
+    button:first-child
+    {
+      margin:0 0 1.5vw 0;
+    }
   }
 
   @media(min-width: 576px)
@@ -83,6 +100,7 @@ const Wrapper = styled.div`
     width: 45%;
     margin:0 0 0 auto;
     height:21vw;
+    max-height: none;
 
     button
     {

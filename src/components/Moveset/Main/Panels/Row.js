@@ -13,7 +13,27 @@ const Row = styled.div`
 
   @media(min-width: 200px)
   {
+    margin: 5vw 0;
 
+    &:last-child
+    {
+      margin: 5vw 0 0 0;
+    }
+
+    &:first-child
+    {
+      margin: 0 0 5vw 0;
+    }
+
+    div:first-child
+    {
+      font-size:3.8vw;
+    }
+
+    div:last-child
+    {
+      font-size:3.6vw;
+    }
   }
 
   @media(min-width: 576px)

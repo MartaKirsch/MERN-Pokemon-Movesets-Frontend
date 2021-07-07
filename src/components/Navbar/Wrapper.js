@@ -9,7 +9,8 @@ const Wrapper = styled.nav`
 
   @media(min-width: 200px)
   {
-
+    height:10%;
+    padding:0 10vw;
   }
 
   @media(min-width: 576px)
@@ -20,7 +21,6 @@ const Wrapper = styled.nav`
 
   @media(min-width: 768px)
   {
-    height:15%;
     padding:0 6vw;
   }
 
@@ -30,16 +30,9 @@ const Wrapper = styled.nav`
     padding:0 4vw;
   }
 
-  @media(min-width: 1200px)
-  {
-    height:12%;
-    padding:0 4vw;
-  }
-
   @media(min-width: 1600px)
   {
     height:10%;
-    padding:0 4vw;
   }
 `;
 

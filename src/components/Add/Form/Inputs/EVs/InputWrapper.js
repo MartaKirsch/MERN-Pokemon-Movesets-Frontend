@@ -14,11 +14,6 @@ const Wrapper = styled.div`
     color:black;
   }
 
-  select, .textWrapper
-  {
-    width:40%;
-  }
-
   input
   {
     width:100%;
@@ -69,12 +64,33 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    margin: 0 0 8vw 0;
 
+    select
+    {
+      width:35%;
+    }
+    .textWrapper
+    {
+      width:45%;
+    }
+
+    input, select
+    {
+      height:11vw;
+      padding: 0 4vw;
+      font-size:3.8vw;
+    }
   }
 
   @media(min-width: 576px)
   {
     margin: 0 0 4.5vw 0;
+
+    select, .textWrapper
+    {
+      width:40%;
+    }
 
     input, select
     {

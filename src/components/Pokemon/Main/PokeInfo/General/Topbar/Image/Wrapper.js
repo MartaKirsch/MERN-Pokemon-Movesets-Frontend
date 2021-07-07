@@ -17,7 +17,17 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    width:40vw;
+    height:40vw;
+    border-radius:15px;
 
+    img
+    {
+      width:35vw;
+      height:35vw;
+      border-radius:15px;
+      border: 2px dashed var(--pistachio);
+    }
   }
 
   @media(min-width: 576px)

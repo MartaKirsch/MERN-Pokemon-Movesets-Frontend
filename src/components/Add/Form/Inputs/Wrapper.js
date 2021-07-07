@@ -64,7 +64,27 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    margin: 6vw 0;
 
+    label
+    {
+      font-size:5vw;
+      margin:0 0 3vw 0;
+    }
+
+    input, textarea
+    {
+      width:70vw;
+      height:11vw;
+      padding: 0 4vw;
+      font-size:3.8vw;
+    }
+
+    textarea
+    {
+      height:40vw;
+      padding:4vw;
+    }
   }
 
   @media(min-width: 576px)

@@ -8,11 +8,6 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
-
-  }
-
-  @media(min-width: 576px)
-  {
     width:100%;
   }
 

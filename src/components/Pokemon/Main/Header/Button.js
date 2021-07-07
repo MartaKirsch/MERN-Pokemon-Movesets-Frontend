@@ -92,7 +92,35 @@ const Button = styled.button`
 
   @media(min-width: 200px)
   {
+    width:28%;
 
+    &:first-child
+    {
+      margin: 0 0 0 5vw;
+    }
+
+    &:last-child
+    {
+      margin: 0 5vw 0 0;
+    }
+
+    .frame
+    {
+      height:7vw;
+      width:7vw;
+    }
+
+    svg
+    {
+      width:5vw;
+      height:5vw;
+    }
+
+    img
+    {
+      width:17vw;
+      height:17vw;
+    }
   }
 
   @media(min-width: 576px)

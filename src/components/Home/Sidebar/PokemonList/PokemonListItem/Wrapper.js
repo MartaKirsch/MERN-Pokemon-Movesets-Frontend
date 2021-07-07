@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const Wrapper = styled.li`
 
-  width:80%;
   border-radius:15px;
   position:relative;
   display:flex;
@@ -107,11 +106,50 @@ const Wrapper = styled.li`
 
   @media(min-width: 200px)
   {
+    width:85%;
+    height: ${({showUpdateDeleteBtns})=> showUpdateDeleteBtns ? "32.25vw" : "26vw"} ;
+    margin: 5vw 0;
 
+    a, .messageWrapper
+    {
+      padding:3vw 2.5vw;
+    }
+
+    img
+    {
+      height:20vw;
+      width:20vw;
+      margin: auto 0;
+    }
+
+    /* user account */
+    .pokename
+    {
+      font-size:3.8vw;
+    }
+
+    .imgWrapper
+    {
+      width:2vw;
+      height:2vw;
+    }
+
+    .messageWrapper
+    {
+      font-size:3.5vw;
+    }
+
+    .messageWrapper button
+    {
+      padding:2.5vw 3.5vw;
+      font-size:3.25vw;
+      border-radius:15px;
+    }
   }
 
   @media(min-width: 576px)
   {
+    width:80%;
     height: ${({showUpdateDeleteBtns})=> showUpdateDeleteBtns ? "20.5vw" : "17vw"} ;
     margin: 3vw 0;
 

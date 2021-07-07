@@ -58,7 +58,27 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    width:70vw;
+    margin: 0 0 8vw 0;
 
+    label
+    {
+      font-size:5vw;
+      color:white;
+      margin:0 0 3vw 0;
+    }
+
+    .wrapper
+    {
+      width:85%;
+    }
+
+    input
+    {
+      height:11vw;
+      padding: 0 4vw;
+      font-size:3.8vw;
+    }
   }
 
   @media(min-width: 576px)

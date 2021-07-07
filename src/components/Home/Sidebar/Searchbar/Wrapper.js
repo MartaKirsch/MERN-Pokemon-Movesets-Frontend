@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
 
   width:100%;
-  height:15%;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -113,12 +112,44 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    height:10%;
 
+    .wrapper
+    {
+      width:85%;
+      height:75%;
+    }
+
+    .buttons
+    {
+      width:15%;
+    }
+
+    .buttons button
+    {
+      position:relative;
+      z-index:3;
+      font-size:3vw;
+      height:50%;
+      border-radius:9px;
+    }
+
+    input
+    {
+      border-radius:15px;
+      padding: 0 4vw;
+      font-size:3.5vw;
+    }
+
+    .line
+    {
+      height:4px;
+    }
   }
 
   @media(min-width: 576px)
   {
-    margin: 0 0 3vw;
+    height:15%;
 
     .wrapper
     {
@@ -155,7 +186,6 @@ const Wrapper = styled.div`
 
   @media(min-width: 768px)
   {
-    margin: 0;
 
     .wrapper
     {

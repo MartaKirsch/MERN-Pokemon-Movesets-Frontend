@@ -5,21 +5,20 @@ const Wrapper = styled.div`
   width:100%;
   display:flex;
   justify-content:center;
+  position:relative;
 
   @media(min-width: 200px)
   {
-
+    height: ${({userAccount}) => userAccount==="true" ? "100%" : "90%"};
   }
 
   @media(min-width: 576px)
   {
-    position:relative;
     height: ${({userAccount}) => userAccount==="true" ? "100%" : "85%"};
   }
 
   @media(min-width: 768px)
   {
-    position:relative;
     height: ${({userAccount}) => userAccount==="true" ? "100%" : "85%"};
   }
 

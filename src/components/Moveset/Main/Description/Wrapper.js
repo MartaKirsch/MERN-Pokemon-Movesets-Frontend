@@ -17,7 +17,20 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    width:88%;
+    margin: 12vw 0 10vw;
 
+    .label
+    {
+      font-size:3.8vw;
+      margin: 0 0 4vw;
+    }
+
+    .content
+    {
+      font-size:3.6vw;
+      padding:6vw;
+    }
   }
 
   @media(min-width: 576px)

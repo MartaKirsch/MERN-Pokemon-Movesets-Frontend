@@ -36,7 +36,24 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    margin: 5vw;
 
+    .arrowBox{
+      font-size:3.2vw;
+    }
+
+    svg{
+      width:10vw;
+    }
+
+    img{
+      width:15vw;
+      height:15vw;
+    }
+
+    a, .arrowBox{
+      margin:0 3vw;
+    }
   }
 
   @media(min-width: 576px)

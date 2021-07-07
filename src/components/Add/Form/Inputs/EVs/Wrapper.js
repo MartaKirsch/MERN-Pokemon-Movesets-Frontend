@@ -28,7 +28,24 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    margin: 6vw 0;
+    width:70vw;
 
+    label
+    {
+      font-size:5vw;
+      margin:0 0 3vw 0;
+    }
+
+    label.sumErr:after
+    {
+      font-size:3vw;
+      left:11vw;
+      top:-8vw;
+      width:35vw;
+      height:260%;
+      padding: 0 2vw;
+    }
   }
 
   @media(min-width: 576px)
@@ -46,8 +63,10 @@ const Wrapper = styled.div`
     {
       font-size:2vw;
       left:9vw;
+      top:0;
       width:42vw;
       height:160%;
+      padding: 0;
     }
   }
 

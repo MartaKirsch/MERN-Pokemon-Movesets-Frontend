@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   {
     flex-direction:column;
     align-items: center;
+    margin:5vw 0;
   }
 
   @media(min-width: 576px)

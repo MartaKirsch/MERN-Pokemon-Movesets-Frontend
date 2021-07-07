@@ -7,7 +7,17 @@ const Wrapper = styled.form`
 
   @media(min-width: 200px)
   {
+    width:65%;
+    svg
+    {
+      width:40vw;
+      height:40vw;
+    }
 
+    button
+    {
+      margin: 8vw 0 0;
+    }
   }
 
   @media(min-width: 576px)

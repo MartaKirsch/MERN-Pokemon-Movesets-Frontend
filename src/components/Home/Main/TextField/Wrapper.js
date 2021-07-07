@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
 
   width:100%;
-  height:85%;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -25,11 +24,25 @@ const Wrapper = styled.div`
 
   @media(min-width: 200px)
   {
+    height:90%;
 
+    h1
+    {
+      font-size:3.8vw;
+    }
+
+    button.logout
+    {
+      font-size:3vw;
+      width:26vw;
+      height:9vw;
+    }
   }
 
   @media(min-width: 576px)
   {
+    height:85%;
+
     h1
     {
       font-size:3.4vw;

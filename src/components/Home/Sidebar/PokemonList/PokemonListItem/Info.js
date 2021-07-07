@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Info = styled.div`
-  margin: 0 0 0 1vw;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
@@ -9,12 +8,14 @@ const Info = styled.div`
 
   @media(min-width: 200px)
   {
-
+    font-size:4vw;
+    margin: 0 0 0 3vw;
   }
 
   @media(min-width: 576px)
   {
     font-size:2.4vw;
+    margin: 0 0 0 1vw;
   }
 
   @media(min-width: 768px)

@@ -7,7 +7,13 @@ const Type = styled.div`
 
   @media(min-width: 200px)
   {
-
+    div
+    {
+      padding:2vw 3vw;
+      font-size:3vw;
+      border-radius:10px;
+      margin:0 2vw;
+    }
   }
 
   @media(min-width: 576px)
