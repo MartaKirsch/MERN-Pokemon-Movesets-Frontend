@@ -29,6 +29,7 @@ const AbilityInput = () => {
       <input
       type="text"
       name="ability"
+      id="ability"
       placeholder="Enter Ability name"
       value={ability}
       onChange={e=>setAbility(e.target.value)}

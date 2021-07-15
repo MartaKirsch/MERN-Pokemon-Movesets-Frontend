@@ -28,6 +28,7 @@ const NatureInput = () => {
       <input
       type="text"
       name="nature"
+      id="nature"
       placeholder="Enter Nature"
       value={nature}
       onChange={e=>setNature(e.target.value)}

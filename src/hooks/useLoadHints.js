@@ -59,7 +59,7 @@ const useLoadHints = (url, input) => {
 
     //select based on input
     let selected = [];
-    const reg = new RegExp('^'+input);
+    const reg = new RegExp('^'+input,"i");
     hints.forEach(item => {
       if(reg.test(item))
         selected.push(item);

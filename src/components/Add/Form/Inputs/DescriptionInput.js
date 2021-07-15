@@ -23,6 +23,7 @@ const DescriptionInput = () => {
       <textarea
       type="text"
       name="description"
+      id="description"
       placeholder="Enter Your Moveset's Description"
       value={description}
       onChange={e=>setDescription(e.target.value)}

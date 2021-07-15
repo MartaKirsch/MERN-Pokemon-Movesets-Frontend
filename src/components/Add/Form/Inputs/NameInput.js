@@ -37,6 +37,7 @@ const NameInput = () => {
       <input
       type="text"
       name="moveset_name"
+      id="moveset_name"
       placeholder="Enter Your Moveset's Name"
       value={name}
       onChange={e=>setName(e.target.value)}

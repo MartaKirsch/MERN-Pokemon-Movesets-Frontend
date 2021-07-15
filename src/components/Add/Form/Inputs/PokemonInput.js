@@ -31,6 +31,7 @@ const PokemonInput = () => {
       <input
       type="text"
       name="pokemon"
+      id="pokemon"
       placeholder="Enter Pokemon name"
       value={pokemon}
       onChange={e=>setPokemon(e.target.value)}

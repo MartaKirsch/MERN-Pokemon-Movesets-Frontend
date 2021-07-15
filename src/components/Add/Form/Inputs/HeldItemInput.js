@@ -28,6 +28,7 @@ const HeldItemInput = () => {
       <input
       type="text"
       name="heldItem"
+      id="heldItem"
       placeholder="Enter Held Item name"
       value={heldItem}
       onChange={e=>setHeldItem(e.target.value)}
